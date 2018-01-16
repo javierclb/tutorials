@@ -4,6 +4,7 @@
 - [Atom](#atom)
 	- [Accessing Settings and Packages](#accessing-settings-and-packages)
 	- [Some Useful Settings Choices](#some-useful-settings-choices)
+	- [Integration with GitHub Desktop](#integration-with-github-desktop)
 	- [For Editing Markdown Files](#for-editing-markdown-files)
 	- [For Editing Julia Files](#for-editing-julia-files)
 
@@ -21,6 +22,11 @@ A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-star
 ## Some Useful Settings Choices
 A few choices to consider after opening settings with `ctrl-,`
 - Go to `System` and choose `Show in file context menus` and `Show in folder context menus`
+
+## Integration with GitHub Desktop
+A great feature in GitHub Desktop is the ability to open a repository as a project in Atom.
+- Go to a repository in the GitHub Desktop and hit `ctrl-shift-a`
+- If it does not open in Atom, you can edit the settings in GitHub Desktop by choosing `File/Options/Advanced` and choosing Atom.
 
 ## For Editing Markdown Files
 For editing [Markdown](markdown.md), you can get better support by adding in a few packages.  For example, add the following packages
