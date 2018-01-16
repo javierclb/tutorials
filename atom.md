@@ -22,11 +22,18 @@ A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-star
 ## Some Useful Settings Choices
 A few choices to consider after opening settings with `ctrl-,`
 - Go to `System` and choose `Show in file context menus` and `Show in folder context menus`
+- Choose `Open the GitHub Panel` and follow the instructions to get a token
 
 ## Integration with GitHub Desktop
 A great feature in GitHub Desktop is the ability to open a repository as a project in Atom.
 - Go to a repository in the GitHub Desktop and hit `ctrl-shift-a`
 - If it does not open in Atom, you can edit the settings in GitHub Desktop by choosing `File/Options/Advanced` and choosing Atom.
+
+Within Atom, using Git directly (without jumping to GitHub Desktop is possible)
+- A useful package is [git-plus](https://github.com/akonwi/git-plus)
+  - Using `ctrl-shift-p` you can see all sorts of options by typing `Git`
+  - The built-in key binding has `ctrl-shift-A P`
+- Another, more GUI, approach is by installing the package [git-control](https://atom.io/packages/git-control) (having trouble with this 1/16/2018)
 
 ## For Editing Markdown Files
 For editing [Markdown](markdown.md), you can get better support by adding in a few packages.  For example, add the following packages
