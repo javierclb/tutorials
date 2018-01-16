@@ -31,8 +31,8 @@ A great feature in GitHub Desktop is the ability to open a repository as a proje
 ## For Editing Markdown Files
 For editing [Markdown](markdown.md), you can get better support by adding in a few packages.  For example, add the following packages
 - [Markdown Writer](https://atom.io/packages/markdown-writer)
-- [Toolbar Markdown Writer](https://github.com/zhuochun/tool-bar-md-writer)
-- [Markdown Preview Plug](https://atom.io/packages/markdown-preview-plus)
+- [Toolbar Markdown Writer](https://github.com/zhuochun/tool-bar-md-writer) - though it tends to clutter
+- [Markdown Preview Plus](https://atom.io/packages/markdown-preview-plus)
 - [Markdown-toc](https://atom.io/packages/markdown-toc)
 
 With these, some of the useful features and key-bindings are
@@ -44,8 +44,12 @@ With these, some of the useful features and key-bindings are
 	- Add inline code: `ctrl-'`
 	- Add code block: `ctrl-"`
 	- Add link: `ctrl-shift-k`
-	- Toggle heading `ctrl-alt-[1-5]` for the headings
+	- Toggle heading `ctrl-[1-5]` for the headings 1-5
 - To add a table of contents, `ctrl-alt-c`
+
+## Using Pandoc for Converting Between Document Types
+- Install [pandoc-convert](https://atom.io/packages/pandoc-convert)
+	- With a `ctrl-shift-p`, you can type `Convert Pandoc` to access various choices.  For example, `.md` to a `.pdf` (including embedded latex)
 
 ## For Editing Julia Files
 See [Julia](https://github.com/econtoolkit/julia)
