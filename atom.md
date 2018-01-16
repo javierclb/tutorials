@@ -13,6 +13,8 @@ For editing [Markdown](markdown.md), you can get better support by adding in a f
 - [Markdown Writer](https://atom.io/packages/markdown-writer)
 - [Toolbar Markdown Writer](https://github.com/zhuochun/tool-bar-md-writer)
 - [Markdown Preview Plug](https://atom.io/packages/markdown-preview-plus)
+- [Markdown-toc](https://atom.io/packages/markdown-toc)
+-
 
 With these, some of the useful features and key-bindings are
 - `ctrl-shift-m` gives a preview of the page
@@ -24,6 +26,7 @@ With these, some of the useful features and key-bindings are
 	- Add code block: `ctrl-"`
 	- Add link: `ctrl-shift-k`
 	- Toggle heading `ctrl-alt-[1-5]` for the headings
+- To add a table of contents, `ctrl-alt-c`
 
 ## For Editing Julia Files
 See [Julia](https://github.com/econtoolkit/julia)
