@@ -6,7 +6,8 @@
 	- [Some Useful Settings Choices](#some-useful-settings-choices)
 	- [Integration with GitHub Desktop](#integration-with-github-desktop)
 	- [For Editing Markdown Files](#for-editing-markdown-files)
-	- [For Editing Julia Files](#for-editing-julia-files)
+	- [Using Pandoc for Converting Between Document Types](#using-pandoc-for-converting-between-document-types)
+	- [Editing Julia Files](#editing-julia-files)
 
 <!-- /TOC -->
 
@@ -32,8 +33,10 @@ A great feature in GitHub Desktop is the ability to open a repository as a proje
 Within Atom, using Git directly (without jumping to GitHub Desktop is possible)
 - A useful package is [git-plus](https://github.com/akonwi/git-plus)
   - Using `ctrl-shift-p` you can see all sorts of options by typing `Git`
-  - The built-in key binding has `ctrl-shift-A P`
-- Another, more GUI, approach is by installing the package [git-control](https://atom.io/packages/git-control) (having trouble with this 1/16/2018)
+  - The built-in key binding has `ctrl-shift-A P` to do everything and commit to the server.
+  - After using that, it will popup a screen to type in the commit message, at which point you can `ctrl-S` to save it, and the operation will continue.
+- Another, more GUI, approach is by installing the package [git-control](https://atom.io/packages/git-control)
+  - Having trouble with this 1/16/2018)
 
 ## For Editing Markdown Files
 For editing [Markdown](markdown.md), you can get better support by adding in a few packages.  For example, add the following packages
@@ -58,5 +61,5 @@ With these, some of the useful features and key-bindings are
 - Install [pandoc-convert](https://atom.io/packages/pandoc-convert)
 	- With a `ctrl-shift-p`, you can type `Convert Pandoc` to access various choices.  For example, `.md` to a `.pdf` (including embedded latex)
 
-## For Editing Julia Files
+## Editing Julia Files
 See [Julia](https://github.com/econtoolkit/julia)
