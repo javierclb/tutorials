@@ -1,5 +1,5 @@
 # Using Markdown
-Markdown is a simple way to write styled text.  Think of it as a replacement for writing out complicated HTML code for small pages or comments.
+Markdown is a simple way to write styled text, and is becoming pervasive on the web.  Think of it as a replacement for writing out complicated HTML code for small pages or comments.
 
 ## Markdown in GitHub
 In GitHub is used in several places:
@@ -24,3 +24,8 @@ To learn the syntax of markdown, take a look at
 - The notebook interface allows you to put a `Markdown` cell in a notebook
 - Unlike GitHub, it also allows you to embed LaTeX directly (inside of either `$$ a = b $$` or `$a = b$`) within the `Markdown` cells.
 - An advantage of storing notebooks in GitHub, is that they will automatically do a read-only display.  For example, see [Linear Algebra Review](notebooks/linear_algebra_review.ipynb)
+
+## Editors for Markdown Files
+- While Markdown is a simple format, if you are editing a lot of `.md` files, you will want to use an editor with syntax highlighting and preview.
+- [Atom](https://atom.io/) is an excellent choice.  See [Atom](atom.md).
+- One option, is to use [VS Code](https://code.visualstudio.com/) and install the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension for syntax highlighting, keyboard shortcuts, and a preview window.
