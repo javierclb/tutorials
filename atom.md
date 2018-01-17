@@ -2,6 +2,7 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Atom](#atom)
+	- [Suggested Packages](#suggested-packages)
 	- [Accessing Settings and Packages](#accessing-settings-and-packages)
 	- [Some Useful Settings Choices](#some-useful-settings-choices)
 	- [Integration with GitHub Desktop](#integration-with-github-desktop)
@@ -13,6 +14,16 @@
 
 A good cross-platform, general purpose editor with Julia support is [Atom](atom.io).  It currently seems to be less responsive than its main competitor, [VS Code](https://code.visualstudio.com/), but is otherwise feature-rich.
 
+## Suggested Packages
+For the impatient, here are the names of some suggested packages to install
+- [git-plus](https://github.com/akonwi/git-plus)
+- [markdown-scroll-sync](https://atom.io/packages/markdown-scroll-sync)
+- [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
+	- Then you need to disable the `markdown-preview` package in the same Packages screen
+- [pandoc-convert](https://atom.io/packages/pandoc-convert)
+- [uber-juno](https://atom.io/packages/uber-juno)
+- [markdown-toc](https://atom.io/packages/markdown-toc)
+-
 ## Accessing Settings and Packages
 A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/)  A few hints:
 - Typing `ctrl-shift-p` pulls up a menu to find tasks without looking through menus.  Just start typing what you want to do.
@@ -40,15 +51,13 @@ Within Atom, using Git directly (without jumping to GitHub Desktop is possible)
 
 ## For Editing Markdown Files
 For editing [Markdown](markdown.md), you can get better support by adding in a few packages.  For example, add the following packages
-- [Markdown Writer](https://atom.io/packages/markdown-writer)
-- [Toolbar Markdown Writer](https://github.com/zhuochun/tool-bar-md-writer) - though it tends to clutter
-- [Markdown Preview Plus](https://atom.io/packages/markdown-preview-plus)
-- [Markdown-toc](https://atom.io/packages/markdown-toc)
+- [markdown-writer](https://atom.io/packages/markdown-writer)
+- [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
+- [markdown-toc](https://atom.io/packages/markdown-toc)
 
 With these, some of the useful features and key-bindings are
 - `ctrl-shift-m` gives a preview of the page
 - `ctrl-shift-x` toggles rendering of inline math (note that currently the github flavored markup doesn't support math, but others do)
-- A toolbar will show on the left hand side, and you can modify the configuration with [Markdown Toolbar](https://github.com/zhuochun/tool-bar-md-writer)
 - There are a number of keymap shortcuts.  Some of the most useful are:
 	- Bold: `ctrl-b`
 	- Add inline code: `ctrl-'`
