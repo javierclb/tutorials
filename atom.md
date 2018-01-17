@@ -23,7 +23,7 @@ For the impatient, here are the names of some suggested packages to install
 - [pandoc-convert](https://atom.io/packages/pandoc-convert)
 - [uber-juno](https://atom.io/packages/uber-juno)
 - [markdown-toc](https://atom.io/packages/markdown-toc)
--
+
 ## Accessing Settings and Packages
 A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/)  A few hints:
 - Typing `ctrl-shift-p` pulls up a menu to find tasks without looking through menus.  Just start typing what you want to do.
@@ -69,6 +69,7 @@ With these, some of the useful features and key-bindings are
 ## Using Pandoc for Converting Between Document Types
 - Install [pandoc-convert](https://atom.io/packages/pandoc-convert)
 	- With a `ctrl-shift-p`, you can type `Convert Pandoc` to access various choices.  For example, `.md` to a `.pdf` (including embedded latex)
+	- You can embed LaTeX in the markdown files using the typical `$ a = b$` and `$$a = b$$` notation
 
 ## Editing Julia Files
 See [Julia](https://github.com/econtoolkit/julia)
