@@ -15,14 +15,24 @@
 A good cross-platform, general purpose editor with Julia support is [Atom](atom.io).  It currently seems to be less responsive than its main competitor, [VS Code](https://code.visualstudio.com/), but is otherwise feature-rich.
 
 ## Suggested Packages
-For the impatient, here are the names of some suggested packages to install
-- [git-plus](https://github.com/akonwi/git-plus)
-- [markdown-scroll-sync](https://atom.io/packages/markdown-scroll-sync)
-- [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
-	- Then you need to disable the `markdown-preview` package in the same Packages screen
-- [pandoc-convert](https://atom.io/packages/pandoc-convert)
-- [uber-juno](https://atom.io/packages/uber-juno)
-- [markdown-toc](https://atom.io/packages/markdown-toc)
+For the impatient, here are the names of some suggested packages to install.  Either use `ctrl-,` to settings, or pull up a terminal and execute the following,
+```
+apm install git-plus
+apm install markdown-scroll-sync
+apm install markdown-preview-plus
+apm install pandoc-convert
+apm install markdown-toc
+apm install git-plus
+apm install uber-juno
+apm install language-latex
+apm install latex
+apm install language-weave
+apm install pdf-view
+```
+A few other steps:
+- If you have just installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
+	- Then you need to disable the `markdown-preview` package
+-
 
 ## Accessing Settings and Packages
 A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/)  A few hints:
@@ -71,5 +81,18 @@ With these, some of the useful features and key-bindings are
 	- With a `ctrl-shift-p`, you can type `Convert Pandoc` to access various choices.  For example, `.md` to a `.pdf` (including embedded latex)
 	- You can embed LaTeX in the markdown files using the typical `$ a = b$` and `$$a = b$$` notation
 
+
 ## Editing Julia Files
 See [Julia](https://github.com/econtoolkit/julia)
+Also useful to install the [language-weave](https://atom.io/packages/language-weave) package
+
+## Editing LaTeX
+Install the following packages:
+- [language-latex](https://atom.io/packages/language-latex)
+- [latex](https://atom.io/packages/latex)
+- [pdf-view](https://atom.io/packages/pdf-view)
+
+Go the the settings for the `latex` package in Atom, and choose
+- `Enable Shell Escape`
+- `Enable SyncTex`
+- `Use DiCy`
