@@ -22,7 +22,6 @@ apm install markdown-scroll-sync
 apm install markdown-preview-plus
 apm install pandoc-convert
 apm install markdown-toc
-apm install git-plus
 apm install uber-juno
 apm install language-latex
 apm install latex
