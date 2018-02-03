@@ -31,11 +31,10 @@ apm install pdf-view
 A few other steps:
 - If you have just installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
 	- Then you need to disable the `markdown-preview` package
--
 
 ## Accessing Settings and Packages
 A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/)  A few hints:
-- Typing `ctrl-shift-p` pulls up a menu to find tasks without looking through menus.  Just start typing what you want to do.
+- Typing `ctrl-shift-p` (or `cmd-shift-p` on OS X) pulls up a menu to find tasks without looking through menus.  Just start typing what you want to do.
 - To access settings, use `ctrl-,` (i.e., hold down `ctrl` and `,` at the same time)
 - To add a package, get to settings with `ctrl-,`, then click on `Install`
 - To access package settings, get to settings with `ctrl-,`, click on `Packages`, and choose whichever package you want to modify the settings for.  See [Atom Packages](http://flight-manual.atom.io/using-atom/sections/atom-packages/) for more.
