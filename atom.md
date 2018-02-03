@@ -40,7 +40,7 @@ A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-star
 - To access package settings, get to settings with `ctrl-,`, click on `Packages`, and choose whichever package you want to modify the settings for.  See [Atom Packages](http://flight-manual.atom.io/using-atom/sections/atom-packages/) for more.
 
 ## Some Useful Settings Choices
-A few choices to consider after opening settings with `ctrl-,`
+A few choices to consider after opening settings with `ctrl-,` (or `cmd-,`on OS X)
 - Go to `System` and choose `Show in file context menus` and `Show in folder context menus`
 - Choose `Open the GitHub Panel` and follow the instructions to get a token
 
