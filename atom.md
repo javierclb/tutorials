@@ -22,27 +22,28 @@ apm install markdown-scroll-sync
 apm install markdown-preview-plus
 apm install pandoc-convert
 apm install markdown-toc
-apm install git-plus
 apm install uber-juno
 apm install language-latex
 apm install latex
 apm install language-weave
 apm install pdf-view
+apm install hydrogen
 ```
 A few other steps:
-- If you have just installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
+- If installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
 	- Then you need to disable the `markdown-preview` package
--
+	- Add `jmd` to the list of markdown file types
+	- Consider turning on `Enable Math Rendering by Default`
 
 ## Accessing Settings and Packages
 A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/)  A few hints:
-- Typing `ctrl-shift-p` pulls up a menu to find tasks without looking through menus.  Just start typing what you want to do.
+- Typing `ctrl-shift-p` (or `cmd-shift-p` on OS X) pulls up a menu to find tasks without looking through menus.  Just start typing what you want to do.
 - To access settings, use `ctrl-,` (i.e., hold down `ctrl` and `,` at the same time)
 - To add a package, get to settings with `ctrl-,`, then click on `Install`
 - To access package settings, get to settings with `ctrl-,`, click on `Packages`, and choose whichever package you want to modify the settings for.  See [Atom Packages](http://flight-manual.atom.io/using-atom/sections/atom-packages/) for more.
 
 ## Some Useful Settings Choices
-A few choices to consider after opening settings with `ctrl-,`
+A few choices to consider after opening settings with `ctrl-,` (or `cmd-,`on OS X)
 - Go to `System` and choose `Show in file context menus` and `Show in folder context menus`
 - Choose `Open the GitHub Panel` and follow the instructions to get a token
 
