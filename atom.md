@@ -27,10 +27,13 @@ apm install language-latex
 apm install latex
 apm install language-weave
 apm install pdf-view
+apm install hydrogen
 ```
 A few other steps:
-- If you have just installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
+- If installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
 	- Then you need to disable the `markdown-preview` package
+	- Add `jmd` to the list of markdown file types
+	- Consider turning on `Enable Math Rendering by Default`
 
 ## Accessing Settings and Packages
 A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/)  A few hints:
