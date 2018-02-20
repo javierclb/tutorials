@@ -19,4 +19,4 @@
 ## Testing and Editing
 - The way to write packages (and code in general) is by writing tests. These will be automatically run on the package and can test
 - The tests go in the packages `/test` directory underneath the package.  The default file `runtests.jl` will be run whenever `Pkg.test("PACKAGENAME")` is called, which in turn usually call the individual `.jl` files in the test folder
-- The best approach is to write code directly in a test file, and use `shift-enter` with each line in Juno.  See [Using Juno for Interactive Test-Driven Julia Package Development](https://www.youtube.com/watch?v=i5iGVkI7XOI)
+- The best approach is to write code directly in a test file, and use `shift-enter` with each line in Juno.  Watch [Using Juno for Interactive Test-Driven Julia Package Development](https://www.youtube.com/watch?v=i5iGVkI7XOI) for a great workflow
