@@ -31,7 +31,7 @@ apm install hydrogen
 ```
 A few other steps:
 - If installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
-	- Then you need to disable the `markdown-preview` package
+	- Then you need to disable the `markdown-preview` package 
 	- Add `jmd` to the list of markdown file types
 	- Consider turning on `Enable Math Rendering by Default`
 
