@@ -18,7 +18,7 @@ A good cross-platform, general purpose editor with Julia support is [Atom](atom.
 For the impatient, here are the names of some suggested packages to install.  Either use `cmd-,` to settings, or pull up a terminal and execute the following,
 ```
 apm install git-plus
-apm install markdown-preview-enhanced
+apm install markdown-preview-plus
 apm install pandoc-convert
 apm install markdown-toc
 apm install uber-juno
@@ -29,7 +29,9 @@ apm install pdf-view
 ```
 A few other steps:
 - If installed [markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced)
-	- Add `.jmd` to the list of markdown file types
+	- Add `.jmd` to the list of `Markdown File Extensions`
+	- Add `source.weave.md` to the list of `Grammars` 
+	- To display, `cmd-shift-m`
 
 ## Accessing Settings and Packages
 A good starting point is [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/)  A few hints:
@@ -59,7 +61,7 @@ Within Atom, using Git directly (without jumping to GitHub Desktop is possible)
 ## For Editing Markdown Files
 For editing [Markdown](markdown.md), you can get better support by adding in a few packages.  For example, add the following packages
 - [markdown-writer](https://atom.io/packages/markdown-writer)
-- [markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced)
+- [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
 - [markdown-toc](https://atom.io/packages/markdown-toc)
 
 With these, some of the useful features and key-bindings are
