@@ -80,8 +80,7 @@ With these, some of the useful features and key-bindings are
 
 
 ## Editing Julia Files
-See [Julia](https://github.com/econtoolkit/julia)
-Also useful to install the [language-weave](https://atom.io/packages/language-weave) package
+See [Julia](https://github.com/econtoolkit/julia) and the [Julia Atom](https://github.com/econtoolkit/julia#atom-with-juno) notes.  Another useful package is [language-weave](https://atom.io/packages/language-weave) package
 
 ## Editing LaTeX
 Install the following packages:
