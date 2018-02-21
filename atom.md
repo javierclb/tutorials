@@ -26,6 +26,11 @@ apm install language-latex
 apm install latex
 apm install language-weave
 apm install pdf-view
+apm install highlight-selected
+```
+Or if you trust me,
+```
+apm install git-plus markdown-preview-plus pandoc-convert markdown-toc uber-juno language-latex latex language-weave pdf-view highlight-selected
 ```
 A few other steps:
 - If installed [markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced)
