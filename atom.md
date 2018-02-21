@@ -36,6 +36,7 @@ A few other steps:
 - If installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
 	- Then you need to disable the `markdown-preview` package
 	- Add `jmd` to the list of markdown file types
+	- Add `source.weave.md` to the list of grammars
 	- Consider turning on `Enable Math Rendering by Default`
 
 ## Accessing Settings and Packages
