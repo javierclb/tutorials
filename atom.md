@@ -24,13 +24,14 @@ apm install markdown-toc
 apm install uber-juno
 apm install language-latex
 apm install latex
+apm install latexer
 apm install language-weave
 apm install pdf-view
 apm install highlight-selected
 ```
 Or if you trust me,
 ```
-apm install git-plus markdown-preview-plus pandoc-convert markdown-toc uber-juno language-latex latex language-weave pdf-view highlight-selected
+apm install git-plus markdown-preview-plus pandoc-convert markdown-toc uber-juno language-latex latex language-weave pdf-view highlight-selected latexer
 ```
 A few other steps:
 - If installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
@@ -100,3 +101,9 @@ Go the the settings for the `latex` package in Atom, and choose
 - `Enable Shell Escape`
 - `Enable SyncTex`
 - `Use DiCy`
+
+TeXLive already has synctex built in, but if you are using MikTeX on Windows, you will need to:
+- Download [kpathsea624.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea623.dll?revision=43972&view=co)
+- Download [synctex.exe](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/synctex.exe?revision=40754&view=co)
+- And place both of them in the miktex binaries folder, e.g. `C:\Program Files\MiKTeX 2.9\miktex\bin\x64`
+-
