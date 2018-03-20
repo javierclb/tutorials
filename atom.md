@@ -103,6 +103,6 @@ Go the the settings for the `latex` package in Atom, and choose
 - `Use DiCy` should probably be set to false
 
 TeXLive already has synctex built in, but if you are using MikTeX on Windows, you will need to:
-- Download [kpathsea624.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea623.dll?revision=43972&view=co)
-- Download [synctex.exe](hhttps://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea630.dll?revision=46993&view=co)
+- Download [kpathsea630.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea630.dll?revision=46993&view=co)
+- Download [synctex.exe](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/synctex.exe?revision=46993&view=co)
 - And place both of them in the miktex binaries folder, e.g. `C:\Program Files\MiKTeX 2.9\miktex\bin\x64`
