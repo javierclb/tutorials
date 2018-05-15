@@ -19,19 +19,14 @@ For the impatient, here are the names of some suggested packages to install.  Ei
 ```
 apm install git-plus
 apm install markdown-preview-plus
-apm install pandoc-convert
-apm install markdown-toc
 apm install uber-juno
-apm install language-latex
-apm install latex
-apm install latexer
 apm install language-weave
 apm install pdf-view
 apm install highlight-selected
 ```
 Or if you trust me,
 ```
-apm install git-plus markdown-preview-plus pandoc-convert markdown-toc uber-juno language-latex latex language-weave pdf-view highlight-selected latexer
+apm install git-plus markdown-preview-plus uber-juno pdf-view highlight-selected
 ```
 A few other steps:
 - If installed [markdown-preview-plus](https://atom.io/packages/markdown-preview-plus)
@@ -92,6 +87,8 @@ With these, some of the useful features and key-bindings are
 See [Julia](https://github.com/econtoolkit/julia) and the [Julia Atom](https://github.com/econtoolkit/julia#atom-with-juno) notes.  Another useful package is [language-weave](https://atom.io/packages/language-weave) package
 
 ## Editing LaTeX
+**Note:** Editing latex in Atom is possible, but slower and buggier than you would hope.
+
 Install the following packages:
 - [language-latex](https://atom.io/packages/language-latex)
 - [latex](https://atom.io/packages/latex)
@@ -100,7 +97,7 @@ Install the following packages:
 Go the the settings for the `latex` package in Atom, and choose
 - `Enable Shell Escape`
 - `Enable SyncTex`
-- `Use DiCy` should probably be set to false
+- `Use DiCy` should probably be set to false if you have MikTeX installed.
 
 TeXLive already has synctex built in, but if you are using MikTeX on Windows, you will need to:
 - Download [kpathsea630.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea630.dll?revision=46993&view=co)
