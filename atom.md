@@ -48,7 +48,8 @@ A few choices to consider after opening settings with `cmd-,` (or `cmd-,`on OS X
 - Choose `Open the GitHub Panel` and follow the instructions to get a token
 
 Go to `Atom > Open Your Config`
- -Add 'softWrap':true to the 'editor' section
+
+ -Add `'softWrap':true` to the `'editor'` section
 
 ## Integration with GitHub Desktop
 A great feature in GitHub Desktop is the ability to open a repository as a project in Atom.
