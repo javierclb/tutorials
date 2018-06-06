@@ -86,6 +86,12 @@ A texteditor for `.jl` files that has a built-in REPL to run code, etc.  It is t
   - You will quickly feel one of the major current issues with Julia environment right now: (time required to plot the first time, which they are working on).
 
 ## Advanced Configuration for your Desktop
-Two Julia packages which can make editing sourcecode easier are [Revise.jl](https://github.com/timholy/Revise.jl) and [OhMyREPL.jl](https://github.com/KristofferC/OhMyREPL.jl).  To load these automatically,
-- Find the `.` files are for your account.  For example, it is usually at `cd ~` on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`.
+Two Julia packages which can make editing sourcecode easier are [Revise.jl](https://github.com/timholy/Revise.jl) and [OhMyREPL.jl](https://github.com/KristofferC/OhMyREPL.jl).  To load these automatically
+- Install them (and, for now, get a different branch of Revise)
+```
+Pkg.add("Revise")
+Pkg.checkout("Revise", "v0.6")
+Pkg.add("OhMyREPL")
+```
+- Find the `.` files are for your account.  For example, it is usually at `cd ~` on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`
 - Copy [.juliarc.jl](etc/.juliarc.jl) to that directory
