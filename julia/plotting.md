@@ -1,5 +1,5 @@
 # Plotting in Julia
-** OUT OF DATE** Use `Plots.jl` and `gr()` for now on a generic setup.
+**OUT OF DATE** Use `Plots.jl` and `gr()` for now on a generic setup.
 
 At this point, plotting in Julia is a mess. Lots of great work is being done, but it will take time.
 
