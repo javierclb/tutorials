@@ -1,8 +1,8 @@
-#The non-VSCode version
-@schedule begin
-    sleep(0.1)
-    @eval using Revise
-end
+# #The non-VSCode version
+# @schedule begin
+#     sleep(0.1)
+#     @eval using Revise
+# end
 
 #vscode version
 atreplinit() do REPL
@@ -15,10 +15,4 @@ atreplinit() do REPL
         end
     end
 end
-# Commenting out for now.  Doesn't work well with vscode
-# if isdir(Pkg.dir("OhMyREPL"))
-#     @eval using OhMyREPL
-# 	OhMyREPL.enable_autocomplete_brackets(false) #Otherwise VSCode breaks
-# else
-#     warn("OhMyREPL not installed.")
-# end
+
