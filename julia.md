@@ -95,3 +95,4 @@ Pkg.add("OhMyREPL")
 ```
 - Find the `.` files are for your account.  For example, it is usually at `cd ~` on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`
 - Copy [.juliarc.jl](etc/.juliarc.jl) to that directory
+- Right now, the OhMyREPL is not automatically loading, because it doesn't work well with VS Code.  It can always be manually added in a particular REPL session with `using OhMyREPL`.
