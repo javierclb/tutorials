@@ -1,3 +1,5 @@
+**TODO**: This [Julia discourse](https://discourse.julialang.org/t/vs-code-is-excellent/6381/10) page has a nice step-by-step, with pictures, for how to set up a good Julia environment. 
+
 # VS Code
 Another cross-platform, general purpose editor with Julia support is [VS Code](https://github.com/Microsoft/vscode)
 
