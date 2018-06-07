@@ -15,9 +15,10 @@ atreplinit() do REPL
         end
     end
 end
-if isdir(Pkg.dir("OhMyREPL"))
-    @eval using OhMyREPL
-	OhMyREPL.enable_autocomplete_brackets(false) #Otherwise VSCode breaks
-else
-    warn("OhMyREPL not installed.")
-end
+# Commenting out for now.  Doesn't work well with vscode
+# if isdir(Pkg.dir("OhMyREPL"))
+#     @eval using OhMyREPL
+# 	OhMyREPL.enable_autocomplete_brackets(false) #Otherwise VSCode breaks
+# else
+#     warn("OhMyREPL not installed.")
+# end
