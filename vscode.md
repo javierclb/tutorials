@@ -1,5 +1,16 @@
+**TODO**: This [Julia discourse](https://discourse.julialang.org/t/vs-code-is-excellent/6381/10) page has a nice step-by-step, with pictures, for how to set up a good Julia environment. 
+
 # VS Code
 Another cross-platform, general purpose editor with Julia support is [VS Code](https://github.com/Microsoft/vscode)
+
+## Workflow Setup
+
+
+1. Install some language packages from the pane on the right (or prepend `@sort:installs category:languages` to your extensions search). Good ones are `julia` ([link](https://github.com/JuliaEditorSupport/julia-vscode)) and `python` ([link](https://github.com/Microsoft/vscode-python)). 
+		- Make sure your `julia` executable is recognized by the extension. To get the path, type `which julia` in the terminal. To edit the setting, go to `preferences` in VSCode, and add `"julia.executablePath": "/usr/local/bin/julia"` to the user settingds dict.
+2. Install a package to let you run code. A good one is `code runner`. 
+3.
+
 
 ## Suggested Packages for Julia
 Go `cmd-shift-X`, or click on the left hand pane, to get the packages.  I suggest installing:
