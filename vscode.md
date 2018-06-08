@@ -7,7 +7,7 @@ Many features in VS Code are found through the Command Palette which can be acce
 1. Ensure that [VS Code](https://github.com/Microsoft/vscode) and [Julia](julia.md) are installed
 1. Go to the Extensions tab by clicking on the left side of VS Code, or `Ctrl+Shift+X`
 2. Type in `julia` to find and install `Julia Language Support`
-    - Alternatively, you can click `Install` from https://marketplace.visualstudio.com/items?itemName=julialang.language-julia
+    - Alternatively, you can click `Install` from [VS Code Julia](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
 3. Optional: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
 4. To test the installation:
     - Create a new File called `test.jl` or something similar, and copy in something like
