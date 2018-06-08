@@ -1,4 +1,14 @@
 # VS Code
+
+<!-- TOC -->
+
+- [VS Code](#vs-code)
+    - [Setup for Julia](#setup-for-julia)
+    - [Setup for Latex](#setup-for-latex)
+    - [Setup for Markdown Editing](#setup-for-markdown-editing)
+    - [Other Links and Material](#other-links-and-material)
+
+<!-- /TOC -->
 Another cross-platform, general purpose editor with Julia support is [VS Code](https://github.com/Microsoft/vscode)
 
 Many features in VS Code are found through the Command Palette which can be accessed with `Ctrl+Shift+P`.  Throughout, these notes on OSX the `Ctrl` is the `⌘` button.  See https://code.visualstudio.com/docs/getstarted/userinterface for more on the VS Code UI.
@@ -41,7 +51,7 @@ plot(1:5, 1:5)
 ```
   - Execute the code (noting that `using Plots` the first plot will take 20-30 seconds after precompilation) and it should show the Plot Pane
 
-## Suggested Packages for Latex
+## Setup for Latex
 1. If you just did the Julia setup, perhaps restart so you don't have the same windows cluttered.
 1. Optional: If you have installed `MikTex` on Windows, you will need to manually setup SyncTex. Texlive already has it  In that case,
   - Download [kpathsea630.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea630.dll?revision=46993&view=co)
@@ -60,5 +70,11 @@ TEST
 4. Then go `Ctrl+Alt+B` to build the file then `Ctrl+Alt+V` to get the PDF preview.
 5. If you make a change in the latex (e.g. change to `TESTS`) and save, if should automatically update the PDF.
 
+## Setup for Markdown Editing
+1. Optional: [Auto-Open Markdown Preview](https://marketplace.visualstudio.com/items?itemName=hnw.vscode-auto-open-markdown-preview)
+2. Optional: [Markdown TOC](https://marketplace.visualstudio.com/items?itemName=AlanWalk.markdown-toc)
+  - To add in a TOC for your markdown file, right click
+
 ## Other Links and Material
 - https://github.com/formulahendry/vscode-code-runner is another package... not sure it is useful for Julia
+- In the menu, go to `Help/Interactive Playground` to see features such as Multi-Cursor Editing, etc.
