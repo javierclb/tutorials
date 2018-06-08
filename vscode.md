@@ -15,8 +15,9 @@ Many features in VS Code are found through the Command Palette which can be acce
 f(x) = x
 f(2)
 ```
-    - In the file, go `F5` to run the file.  The first time you do this, it is likely that this will take time so be a little patient.  On the bottom, it may say something like "Language Server Busy"
-  - If it shows something in the bottom "TERMINAL" like the following, then it is working
+
+   - In the file, go `F5` to run the file.  The first time you do this, it is likely that this will take time so be a little patient.  On the bottom, it may say something like "Language Server Busy"
+   - If it shows something in the bottom "TERMINAL" like the following, then it is working
 ```
 Main> f(x) = x
 f (generic function with 1 method)
