@@ -1,15 +1,17 @@
-**TODO**: This [Julia discourse](https://discourse.julialang.org/t/vs-code-is-excellent/6381/10) page has a nice step-by-step, with pictures, for how to set up a good Julia environment. 
-
 # VS Code
 Another cross-platform, general purpose editor with Julia support is [VS Code](https://github.com/Microsoft/vscode)
 
 ## Workflow Setup
 
-
-1. Install some language packages from the pane on the right (or prepend `@sort:installs category:languages` to your extensions search). Good ones are `julia` ([link](https://github.com/JuliaEditorSupport/julia-vscode)) and `python` ([link](https://github.com/Microsoft/vscode-python)). 
-		- Make sure your `julia` executable is recognized by the extension. To get the path, type `which julia` in the terminal. To edit the setting, go to `preferences` in VSCode, and add `"julia.executablePath": "/usr/local/bin/julia"` to the user settingds dict.
-2. Install a package to let you run code. A good one is `code runner`. 
-3.
+1. Download and install VSCode. 
+2. Install some language packages from the pane on the right (or prepend `@sort:installs category:languages` to your extensions search). Key one is `julia`. Grabbing `python` might also be good. 
+3. Confirm that the `julia` package recognizes where your Julia executable is installed. 
+	- For macOS users, hit `⌘,`. In the pane on the right ("User Settings"), add `"julia.executablePath": "JULIA_LOCATION"`, where `JULIA_LOCATION` is the result of running `which julia` in the terminal. 
+	- For Windows users, hit `ABC` (fill in).
+	- For Linux users, you would probably know more than us about this.
+4. Familiarize yourself with some of the workspace elements:
+	- **Code Execution and REPL**: Hitting `⇧⌘P` on macOS (`XYZ` on windows, Linux) will open the command palette. From there you'll see the shortcuts (and clickable options for) the REPL and the option to execute whatever file you have open.
+	- **Interactive Playground**: VSCode has many features which distinguish it from other text editors. To get a feel for these, experiment with the `interactive playground`, which can be accessed from the welcome screen (or the `Debug` window). 
 
 
 ## Suggested Packages for Julia
