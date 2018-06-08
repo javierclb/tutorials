@@ -1,32 +1,67 @@
 # VS Code
 Another cross-platform, general purpose editor with Julia support is [VS Code](https://github.com/Microsoft/vscode)
 
-## Workflow Setup
+Many features in VS Code are found through the Command Palette which can be accessed with `Ctrl+Shift+P`.  Throughout, these notes on OSX the `Ctrl` is the `⌘` button.  See https://code.visualstudio.com/docs/getstarted/userinterface for more on the VS Code UI.
 
-1. Download and install VSCode. 
-2. Install some language packages from the pane on the right (or prepend `@sort:installs category:languages` to your extensions search). Key one is `julia`. Grabbing `python` might also be good. 
-3. Confirm that the `julia` package recognizes where your Julia executable is installed. 
-	- For macOS users, hit `⌘,`. In the pane on the right ("User Settings"), add `"julia.executablePath": "JULIA_LOCATION"`, where `JULIA_LOCATION` is the result of running `which julia` in the terminal. 
-	- For Windows users, hit `ABC` (fill in).
-	- For Linux users, you would probably know more than us about this.
-4. Familiarize yourself with some of the workspace elements:
-	- **Code Execution and REPL**: Hitting `⇧⌘P` on macOS (`XYZ` on windows, Linux) will open the command palette. From there you'll see the shortcuts (and clickable options for) the REPL and the option to execute whatever file you have open.
-	- **Interactive Playground**: VSCode has many features which distinguish it from other text editors. To get a feel for these, experiment with the `interactive playground`, which can be accessed from the welcome screen (or the `Debug` window). 
-
-## Suggested Packages for Julia
-Go `cmd-shift-X`, or click on the left hand pane, to get the packages.  I suggest installing:
-- For general use
-	- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - I think...
-	- [Code Runner](https://github.com/formulahendry/vscode-code-runner). (vet this) - Kind of an all-in-one code runner for VSCode, where you have a map `{language: executable}` and some other nifty features. Lets you use one command for whatever language the editor thinks the file is. This seems to be the go-to fix for running code in VSCode, but YMMV. 
-	
-- For Julia
+## Setup for Julia
+1. Ensure that [VS Code](https://github.com/Microsoft/vscode) and [Julia](julia.md) are installed
+1. Go to the Extensions tab by clicking on the left side of VS Code, or `Ctrl+Shift+X`
+2. Type in `julia` to find and install `Julia Language Support`
+    - Alternatively, you can click `Install` from https://marketplace.visualstudio.com/items?itemName=julialang.language-julia
+3. Optional: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
+4. To test the installation:
+    - Create a new File called `test.jl` or something similar, and copy in something like
+```
+f(x) = x
+f(2)
+```
+    - In the file, go `F5` to run the file.  The first time you do this, it is likely that this will take time so be a little patient.  On the bottom, it may say something like "Language Server Busy"
+  - If it shows something in the bottom "TERMINAL" like the following, then it is working
+```
+Main> f(x) = x
+f (generic function with 1 method)
+Main> f(2)
+2
+```
+5. Optional: If the above doesn't work, then you may need to manually set your Julia executable.
+  - First, find the location of the julia binary.  The easiest way to do this is to open a separate Julia REPL and type `JULIA_HOME`
+```
+julia> JULIA_HOME
+"C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin"
+```
+  - From this location, the file is something like `C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe` on Windows or something equivalent on other OSs.  For Windows, make sure to double every backlash
+  - To set this in VS Code, open up the user settings by opening up the command palette `> Preferences: User Settings`
+  - In here, type `julia` to get the julia specific settings
+  - Then click on the "julia.executablePath" in the "Default User Settings" and choose "Edit" to "Copy to Settings"
+  - This copies it over, and you can put in the path.  For example, `"julia.executablePath": "C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe"` where the quotes are important.
+6. Play around with executing Julia code
+  - You can execute a single line with `Ctrl+Enter`, which is a great way to go line by line through the code
+  - Execute the whole file with `F5`
+  - To see the plotting pane, ensure you have `Plots.jl` installed (i.e. `Pkg.add("Plots")`) and then copy the following into a test file
+```
+using Plots
+plot(1:5, 1:5)
+```
+  - Execute the code (noting that `using Plots` the first plot will take 20-30 seconds after precompilation) and it should show the Plot Pane
 
 ## Suggested Packages for Latex
-- [LaTex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
-- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+1. If you just did the Julia setup, perhaps restart so you don't have the same windows cluttered.
+1. Optional: If you have installed `MikTex` on Windows, you will need to manually setup SyncTex. Texlive already has it  In that case,
+  - Download [kpathsea630.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea630.dll?revision=46993&view=co)
+  - Download [synctex.exe](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/synctex.exe?revision=46993&view=co)
+  - And place both of them in the miktex binaries folder, e.g. `C:\Program Files\MiKTeX 2.9\miktex\bin\x64`
+2. Install the following packages in VS Code (clicking on them or using `Ctrl+Shift+X` to get the extensions)
+  - [LaTex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+3. At this point, you should be able to open a test latex file.  Create a `test.tex` file with something like
+```
+\documentclass{article}
+\begin{document}
+TEST
+\end{document}
+```
+4. Then go `Ctrl+Alt+B` to build the file then `Ctrl+Alt+V` to get the PDF preview.
+5. If you make a change in the latex (e.g. change to `TESTS`) and save, if should automatically update the PDF.
 
-TeXLive already has synctex built in, but if you are using MikTeX on Windows, you will need to:
-
-- Download [kpathsea630.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea630.dll?revision=46993&view=co)
-- Download [synctex.exe](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/synctex.exe?revision=46993&view=co)
-- And place both of them in the miktex binaries folder, e.g. `C:\Program Files\MiKTeX 2.9\miktex\bin\x64`
+## Other Links and Material
+- https://github.com/formulahendry/vscode-code-runner is another package... not sure it is useful for Julia
