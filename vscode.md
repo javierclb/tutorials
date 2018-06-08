@@ -17,7 +17,7 @@ Another cross-platform, general purpose editor with Julia support is [VS Code](h
 Go `cmd-shift-X`, or click on the left hand pane, to get the packages.  I suggest installing:
 - For general use
 	- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - I think...
-	- [Code Runner](https://github.com/formulahendry/vscode-code-runner). - Kind of an all-in-one code runner for VSCode, where you have a map `{language: executable}` and some other nifty features. Lets you use one command for whatever language the editor thinks the file is. This seems to be the go-to fix for running code in VSCode, but YMMV. 
+	- [Code Runner](https://github.com/formulahendry/vscode-code-runner). (vet this) - Kind of an all-in-one code runner for VSCode, where you have a map `{language: executable}` and some other nifty features. Lets you use one command for whatever language the editor thinks the file is. This seems to be the go-to fix for running code in VSCode, but YMMV. 
 	
 - For Julia
 
