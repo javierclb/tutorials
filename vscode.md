@@ -24,16 +24,16 @@ Main> f(2)
 2
 ```
 5. Optional: If the above doesn't work, then you may need to manually set your Julia executable.
-  - First, find the location of the julia binary.  The easiest way to do this is to open a separate Julia REPL and type `JULIA_HOME`
+    - First, find the location of the julia binary.  The easiest way to do this is to open a separate Julia REPL and type `JULIA_HOME`
 ```
 julia> JULIA_HOME
 "C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin"
 ```
-  - From this location, the file is something like `C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe` on Windows or something equivalent on other OSs.  For Windows, make sure to double every backlash
-  - To set this in VS Code, open up the user settings by opening up the command palette `> Preferences: User Settings`
-  - In here, type `julia` to get the julia specific settings
-  - Then click on the "julia.executablePath" in the "Default User Settings" and choose "Edit" to "Copy to Settings"
-  - This copies it over, and you can put in the path.  For example, `"julia.executablePath": "C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe"` where the quotes are important.
+    - From this location, the file is something like `C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe` on Windows or something equivalent on other OSs.  For Windows, make sure to double every backlash
+    - To set this in VS Code, open up the user settings by opening up the command palette `> Preferences: User Settings`
+    - In here, type `julia` to get the julia specific settings
+    - Then click on the "julia.executablePath" in the "Default User Settings" and choose "Edit" to "Copy to Settings"
+    - This copies it over, and you can put in the path.  For example, `"julia.executablePath": "C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe"` where the quotes are important.
 6. Play around with executing Julia code
   - You can execute a single line with `Ctrl+Enter`, which is a great way to go line by line through the code
   - Execute the whole file with `F5`
