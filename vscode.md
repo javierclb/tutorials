@@ -66,7 +66,7 @@ plot(1:5, 1:5)
 - If you are working on a cloned repository, you can see changes in the `Source Control` tab, or with `Ctrl+Shift+G`.
 - This will show you changes to the files, etc.  It will let you `Commit` with a message as well.
 - The left hand side of the bottom bar on VS Code (or the Git repository in this tab) will let you Pull/Push/Sync
-- A simple [Tutorial[(https://www.youtube.com/watch?v=9cMWR-EGFuY) with more detail in [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
+- A simple [Tutorial](https://www.youtube.com/watch?v=9cMWR-EGFuY) with more detail in [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
 
 ## Setup for Latex
 1. If you just did the Julia setup, perhaps restart so you don't have the same windows cluttered.
