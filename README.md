@@ -1,10 +1,9 @@
 # Tutorials and Setup Guides
 - [GitHub](github.md)
 - [Markdown](markdown.md)
-- [Julia](julia.md)
-    - More [Julia](/julia/README.md)
-- [Atom](atom.md)
+- [Julia](julia.md) - With additional notes in [Julia Notes](/julia/README.md)
 - [VS Code](vscode.md)
+- [Atom](atom.md) - At this point, it is suggested to use VS Code for performance reasons.
 - [Submitting Code](submitting_code.md) for classes
 
 # Setup and `.` Files
