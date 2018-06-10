@@ -4,6 +4,7 @@
   - [Extensions, User Settings, and the Command Pallete](#extensions-user-settings-and-the-command-pallete)
   - [General Setup](#general-setup)
   - [Setup for Julia](#setup-for-julia)
+  - [Github Integration](#github-integration)
   - [Setup for Latex](#setup-for-latex)
   - [Other Links and Material](#other-links-and-material)
 
@@ -64,8 +65,8 @@ plot(1:5, 1:5)
 ## Github Integration
 - If you are working on a cloned repository, you can see changes in the `Source Control` tab, or with `Ctrl+Shift+G`.
 - This will show you changes to the files, etc.  It will let you `Commit` with a message as well.
-- The bottom left hand 
-A simple [Tutorial[(https://www.youtube.com/watch?v=9cMWR-EGFuY) with more detail in [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
+- The left hand side of the bottom bar on VS Code (or the Git repository in this tab) will let you Pull/Push/Sync
+- A simple [Tutorial[(https://www.youtube.com/watch?v=9cMWR-EGFuY) with more detail in [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
 
 ## Setup for Latex
 1. If you just did the Julia setup, perhaps restart so you don't have the same windows cluttered.
