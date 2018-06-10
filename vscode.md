@@ -5,7 +5,6 @@
   - [General Setup](#general-setup)
   - [Setup for Julia](#setup-for-julia)
   - [Setup for Latex](#setup-for-latex)
-  - [Setup for Markdown Editing](#setup-for-markdown-editing)
   - [Other Links and Material](#other-links-and-material)
 
 Another cross-platform, general purpose editor with Julia support is [VS Code](https://github.com/Microsoft/vscode)
@@ -17,7 +16,6 @@ Many features in VS Code are found through the Command Palette which can be acce
 **Extensions:** Go to the Extensions tab by clicking on the left side of VS Code, or `Ctrl+Shift+X`.  To find an extenion, type in part of the name into `Search Extensions in Marketplace`.  Alternatively, you can directly click "Install" button on the web links in the VS Code Marketplace
 
 **User Settings:** To edit [Settings](https://code.visualstudio.com/docs/getstarted/settings) in VS Code, open up the user settings with `Ctrl+,` or opening up the command palette and starting to type `User Settings`.To find a particular settings, start typing in the name of the setting, extension, etc. Once you find it, you can select the `Edit` icon next to a particular setting to copy it to your local settings, and change it.
-
 
 ## General Setup
 1. Install[VS Code](https://github.com/Microsoft/vscode)
@@ -62,6 +60,12 @@ using Plots
 plot(1:5, 1:5)
 ```
   - Execute the code (noting that `using Plots` the first plot will take 20-30 seconds after precompilation) and it should show the Plot Pane
+
+## Github Integration
+- If you are working on a cloned repository, you can see changes in the `Source Control` tab, or with `Ctrl+Shift+G`.
+- This will show you changes to the files, etc.  It will let you `Commit` with a message as well.
+- The bottom left hand 
+A simple [Tutorial[(https://www.youtube.com/watch?v=9cMWR-EGFuY) with more detail in [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
 
 ## Setup for Latex
 1. If you just did the Julia setup, perhaps restart so you don't have the same windows cluttered.
