@@ -19,7 +19,7 @@ Many features in VS Code are found through the Command Palette which can be acce
 **User Settings:** To edit [Settings](https://code.visualstudio.com/docs/getstarted/settings) in VS Code, open up the user settings with `Ctrl+,` or opening up the command palette and starting to type `User Settings`.To find a particular settings, start typing in the name of the setting, extension, etc. Once you find it, you can select the `Edit` icon next to a particular setting to copy it to your local settings, and change it.
 
 ## General Setup
-1. Install[VS Code](https://github.com/Microsoft/vscode)
+1. Install [VS Code](https://github.com/Microsoft/vscode)
 2. Optional: Install [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) 
     - Not required, but a good idea since [Markdown](markdown.md) is pervasive
     - For TOC compatability with github, go to the User Settings with `Ctrl+,` and then set `"markdown.extension.toc.githubCompatibility": true`

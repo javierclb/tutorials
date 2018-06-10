@@ -23,9 +23,8 @@ To learn the syntax of markdown, take a look at
 - Another place where you can use Markdown is in Jupyter Notebooks (such as that described in [Julia](https://github.com/econtoolkit/julia)).  These usually have the `.ipynb` extension.
 - The notebook interface allows you to put a `Markdown` cell in a notebook
 - Unlike GitHub, it also allows you to embed LaTeX directly (inside of either `$$ a = b $$` or `$a = b$`) within the `Markdown` cells.
-- An advantage of storing notebooks in GitHub, is that they will automatically do a read-only display.  For example, see [Linear Algebra Review](notebooks/linear_algebra_review.ipynb)
+- An advantage of storing notebooks in GitHub, is that they will automatically do a read-only display.
 
 ## Editors for Markdown Files
 - While Markdown is a simple format, if you are editing a lot of `.md` files, you will want to use an editor with syntax highlighting and preview.
-- [Atom](https://atom.io/) is an excellent choice.  See [Atom](atom.md).
-- One option, is to use [VS Code](https://code.visualstudio.com/) and install the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension for syntax highlighting, keyboard shortcuts, and a preview window.
+- [VS Code](https://github.com/Microsoft/vscode) is an excellent editor for markdown, esepecially with the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension.  See setup suggestions in [VS Code Notes](vscode.md#general-setup)
