@@ -1,12 +1,12 @@
 
 # VS Code
 - [VS Code](#vs-code)
-  - [Extensions, User Settings, and the Command Pallete](#extensions-user-settings-and-the-command-pallete)
-  - [General Setup](#general-setup)
-  - [Setup for Julia](#setup-for-julia)
-  - [Github Integration](#github-integration)
-  - [Setup for Latex](#setup-for-latex)
-  - [Other Links and Material](#other-links-and-material)
+    - [Extensions, User Settings, and the Command Pallete](#extensions-user-settings-and-the-command-pallete)
+    - [General Setup](#general-setup)
+    - [Setup for Julia](#setup-for-julia)
+    - [Github Integration](#github-integration)
+    - [Setup for Latex](#setup-for-latex)
+    - [Other Links and Material](#other-links-and-material)
 
 Another cross-platform, general purpose editor with Julia support is [VS Code](https://github.com/Microsoft/vscode)
 
@@ -20,11 +20,11 @@ Many features in VS Code are found through the Command Palette which can be acce
 
 ## General Setup
 1. Install [VS Code](https://github.com/Microsoft/vscode)
-2. Optional: Install [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) 
+2. *Optional*: Install [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) 
     - Not required, but a good idea since [Markdown](markdown.md) is pervasive
     - For TOC compatability with github, go to the User Settings with `Ctrl+,` and then set `"markdown.extension.toc.githubCompatibility": true`
-    - To have it show a preview immediately when you open one of the files, set "markdown.extension.preview.autoShowPreviewToSide": true
-3. Optional: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
+    - To have it show a preview immediately when you open one of the files, set `"markdown.extension.preview.autoShowPreviewToSide": true`
+3. *Optional*: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
 
 ## Setup for Julia
 1. Ensure that [VS Code](https://github.com/Microsoft/vscode) and [Julia](julia.md) are installed
@@ -45,7 +45,7 @@ f (generic function with 1 method)
 Main> f(2)
 2
 ```
-4. Optional: If the above doesn't work, then you may need to manually set your Julia executable.
+4. *Optional*: If the above doesn't work, then you may need to manually set your Julia executable.
     - First, find the location of the julia binary.  The easiest way to do this is to open a separate Julia REPL and type `JULIA_HOME` to get something like `C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin`
     - From this location, the file is something like `C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe` on Windows or something equivalent on other OSs.  For Windows, make sure to double every backlash
     - To set this in VS Code, open up the user settings by opening up the command palette `> Preferences: User Settings`
@@ -70,14 +70,14 @@ plot(1:5, 1:5)
 
 ## Setup for Latex
 1. If you just did the Julia setup, perhaps restart so you don't have the same windows cluttered.
-1. Optional: If you have installed `MikTex` on Windows, you will need to manually setup SyncTex. Texlive already has it  In that case,
+2. *Optional*: While TeXLive already has it, if you have installed `MikTex` on Windows, you will need to manually setup SyncTex:
     - Download [kpathsea630.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea630.dll?revision=46993&view=co)
     - Download [synctex.exe](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/synctex.exe?revision=46993&view=co)
     - And place both of them in the miktex binaries folder, e.g. `C:\Program Files\MiKTeX 2.9\miktex\bin\x64`
-2. Install the following packages in VS Code (clicking on them or using `Ctrl+Shift+X` to get the extensions)
+3. Install the following packages in VS Code (clicking on them or using `Ctrl+Shift+X` to get the extensions)
   - [LaTex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
   - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-3. At this point, you should be able to open a test latex file.  Create a `test.tex` file with something like
+4. At this point, you should be able to open a test latex file.  Create a `test.tex` file with something like
 ```tex
 \documentclass{article}
 \begin{document}
@@ -86,7 +86,24 @@ TEST
 ```
 4. Then go `Ctrl+Alt+B` to build the file then `Ctrl+Alt+V` to get the PDF preview.
 5. If you make a change in the latex (e.g. change to `TESTS`) and save, if should automatically update the PDF.
-
+7. *Optional*: Many latex packages require a compilation settings with shell access.
+    - To do this, open up the user settings, `Ctrl+,` and start searching for `latex-workshop.latex.magic.args`
+    - Copy it to the `USER SETTINGS` and modify, adding in a `"-shell-escape",` line.  It should look something like,
+    ```JSON
+    "latex-workshop.latex.magic.args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-shell-escape",
+            "-file-line-error",
+            "%DOC%"
+        ]
+    ```
+    - These settings are used whenever the magic comments are used in the latex file, e.g.
+    ```tex
+    % !TEX program = pdflatex
+    % !BIB program = bibtex
+    ```
+8. *Optional:* For less irritating error maessages, change to `"latex-workshop.message.error.show": false` and  `"latex-workshop.message.warning.show": false`
 
 ## Other Links and Material
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) is an extension to maintain settings between different computers.  A little complicated to setup
