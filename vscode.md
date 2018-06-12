@@ -103,7 +103,7 @@ TEST
     % !TEX program = pdflatex
     % !BIB program = bibtex
     ```
-8. *Optional:* For less irritating error maessages, change to `"latex-workshop.message.error.show": false` and  `"latex-workshop.message.warning.show": false`
+8. *Optional:* For less irritating error messages, change to `"latex-workshop.message.error.show": false` and  `"latex-workshop.message.warning.show": false`
 
 ## Other Links and Material
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) is an extension to maintain settings between different computers.  A little complicated to setup
