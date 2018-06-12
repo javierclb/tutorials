@@ -24,7 +24,8 @@ Many features in VS Code are found through the Command Palette which can be acce
     - Not required, but a good idea since [Markdown](markdown.md) is pervasive
     - For TOC compatability with github, go to the User Settings with `Ctrl+,` and then set `"markdown.extension.toc.githubCompatibility": true`
     - To have it show a preview immediately when you open one of the files, set `"markdown.extension.preview.autoShowPreviewToSide": true`
-3. *Optional*: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
+3. *Optional:* It is convenient to globally change the word wrap, so choose `Ctrl+,` and then set `"editor.wordWrap": "on",
+4. *Optional*: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
 
 ## Setup for Julia
 1. Ensure that [VS Code](https://github.com/Microsoft/vscode) and [Julia](julia.md) are installed
@@ -61,6 +62,9 @@ using Plots
 plot(1:5, 1:5)
 ```
   - Execute the code (noting that `using Plots` the first plot will take 20-30 seconds after precompilation) and it should show the Plot Pane
+8. *Optional, but strongly encouraged:* Setup the `Revise.jl` workflow described in [Julia Notes](julia.md#advanced-configuration-for-your-desktop-the-revise-workflow).  To summarize,
+    - Find the `.` files are for your account. For example, it is usually at cd ~ on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`
+    - On Julia v0.6: Download the file  a file called `.juliarc.jl` in that directly, 
 
 ## Github Integration
 - If you are working on a cloned repository, you can see changes in the `Source Control` tab, or with `Ctrl+Shift+G`.

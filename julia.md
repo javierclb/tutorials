@@ -34,15 +34,8 @@ Alternatively, to install Julia separately you can follow [First Steps](https://
     - Choose the Anaconda with Python 3.6
 
 2. [Julia](https://julialang.org/downloads/)
-3. [Atom](https://atom.io/) as an IDE.  Then,
 
-    - In Atom, go to Settings (`ctrl-,`, or `cmd-,` on OS X) and go to the "Install" panel.
-    - Type `uber-juno` into the search box and hit enter. Click the install button on the package of the same name.
-    - You then typically need to point Juno at the julia executable.  To do this, go to the settings page with `ctrl-,` and go to the `julia-client` package
-    - Make sure you know the locaion of the Julia executable.  You can find this in the REPL with the function `JULIA_HOME`.e.g. `/bin/Julia-0.6.2/bin/julia.exe`  On windows, better to avoid backslashes
-    - There you will see a place to put the Julia executable. Put the full file to it,
-    - After, you can test out a Julia consol by choosing `shift-ctrl-p` (or `shift-cmd-p` on OS X) and then typing `Julia` to see all of the options.
-    - For more on atom, see [Atom Tutorial](atom.md)
+3. [VS Code](vscode.md) as an IDE for editing Julia
 
 4. Consider running the following setup to download and precompile some useful packages
 
@@ -74,25 +67,39 @@ Alternatively, to install Julia separately you can follow [First Steps](https://
    If you don't want to enter the command `cd/folder_name` each time, you could set up a bash alias command. See this [tutorial](https://davidwalsh.name/alias-bash).
 
 
+
+## Advanced Configuration for your Desktop: The Revise Workflow
+It is much easier to edit sourcecode in an editor with [Revise.jl](https://github.com/timholy/Revise.jl).
+1. First install with `Pkg.add("Revise")`
+2. Find the `.` files are for your account.  For example, it is usually at `cd ~` on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`
+3. Copy [.juliarc.jl](etc/.juliarc.jl) to that directory
+4. *Optional, with Atom:* At this point, you need ot use the master of Revise for Atom (but not vscode).  To do this,
+```
+Pkg.add("Revise")
+Pkg.checkout("Revise", "v0.6")
+```
+
+Another package is 
+REPL, but it doesn't work well with VS Code.  It can always be manually added in a particular REPL session with `using OhMyREPL`.
+
 ## Atom with Juno
+**NOTE:** At this point, [VS Code](vscode.md) is a much higher performance editor, even if it has fewer Julia specific features.
 
-A texteditor for `.jl` files that has a built-in REPL to run code, etc.  It is the closest to a matlab style IDE, but the debugger is still in progress.  Juno is built on [Atom](https://atom.io/) and has a reputation for being a little slow as an editor, although it is making progress.
+A text editor for `.jl` files that has a built-in REPL to run code, etc.  It is the closest to a matlab style IDE, but the debugger is still in progress.  Juno is built on [Atom](https://atom.io/) and has a reputation for being a little slow as an editor, although it is making progress.
 
+- In Install [Atom](https://atom.io/)
+- o to Settings (`ctrl-,`, or `cmd-,` on OS X) and go to the "Install" panel.
+- Type `uber-juno` into the search box and hit enter. Click the install button on the package of the same name.
+- You then typically need to point Juno at the julia executable.  To do this, go to the settings page with `ctrl-,` and go to the `julia-client` package
+- Make sure you know the locaion of the Julia executable.  You can find this in the REPL with the function `JULIA_HOME`.e.g. `/bin/Julia-0.6.2/bin/julia.exe`  On windows, better to avoid backslashes
+- There you will see a place to put the Julia executable. Put the full file to it,
+- After, you can test out a Julia consol by choosing `shift-ctrl-p` (or `shift-cmd-p` on OS X) and then typing `Julia` to see all of the options.
+- For more on atom, see [Atom Tutorial](atom.md)
+
+For some notes,
   - See [Installation](http://docs.junolab.org/latest/man/installation.html)
   - See [Usage Guide](http://docs.junolab.org/latest/man/basic_usage.html)
   - After installation, start Juno and create a new `.jl` file, or open the `example.jl` in this repository
   - To run a line of code in the editor, use `shift-enter`
   - To run the entire file, you can use the tools on the left hand bar, or `shift-control-enter`
   - You will quickly feel one of the major current issues with Julia environment right now: (time required to plot the first time, which they are working on).
-
-## Advanced Configuration for your Desktop: The Revise workflow
-It is much easier to edit sourcecode in an editor with [Revise.jl](https://github.com/timholy/Revise.jl).
-- To get Revise working from within the  Install them (and, for now, get a different branch of Revise)
-```
-Pkg.add("Revise")
-Pkg.checkout("Revise", "v0.6")
-```
-- Find the `.` files are for your account.  For example, it is usually at `cd ~` on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`
-- Copy [.juliarc.jl](etc/.juliarc.jl) to that directory
-- Another package is 
-REPL, but it doesn't work well with VS Code.  It can always be manually added in a particular REPL session with `using OhMyREPL`.
