@@ -29,16 +29,11 @@ One option is [JuliaPro](https://juliacomputing.com/products/juliapro.html) as a
 
 Alternatively, to install Julia separately you can follow [First Steps](https://lectures.quantecon.org/jl/getting_started.html#first-steps).  Alternatively, for the impatient the summary of links to download and install is:
 1. [Anaconda](https://www.anaconda.com/download/)
-
     - May not be necessary if you already have a complete installation of Python and its package managers
     - Choose the Anaconda with Python 3.6
-
-2. [Julia](https://julialang.org/downloads/)
-
-3. [VS Code](vscode.md) as an IDE for editing Julia
-
-4. Consider running the following setup to download and precompile some useful packages
-
+2. Install [Julia](https://julialang.org/downloads/)
+3. *Optional, but Recommended*: [VS Code](https://github.com/Microsoft/vscode) as an editor, with installation/setup notes in [VS Code Notes](vscode.md)
+4. *Optional, but Recommended* Consider running the following setup to download and precompile some useful packages
     - Either download [setup.jl](etc/setup.jl) or clone this repository
     - Start up a Julia console, use `;` to get a shell and `cd` into the location of that file
     - Then execute the following, and go to lunch
@@ -51,20 +46,17 @@ Alternatively, to install Julia separately you can follow [First Steps](https://
     - Otherwise, you will need to go to a Julia consol and type `Pkg.add("IJulia")`
     - After installation, you can run jupyter with `jupyter notebook` or to use the latest interface (which is a major step forward) `jupyter lab`
     - Depending on how you installed Anaconda, this may require adding a directory to the PATH.  The location depends on the installation location, but it will be something like `/bin/Anaconda3/Scripts`
-
 6. To change Jupyter start-up directory
+   - For Windows: if Anaconda was installed in C:/bin, then created a shortcut with
+        - Target = `C:\bin\Anaconda3\Scripts\jupyter.exe notebook`
+        - Or to use Jupyter Lab, `Target = C:\bin\Anaconda3\Scripts\jupyter.exe lab`
+        - Next, to have it start in a particular folder, change the "Start In" to = `c:\working` or wherever you want.
 
-   For Windows: if Anaconda was installed in C:/bin, then created a shortcut with
-   - Target = `C:\bin\Anaconda3\Scripts\jupyter.exe notebook`
-   - Or to use Jupyter Lab, `Target = C:\bin\Anaconda3\Scripts\jupyter.exe lab`
-   - Next, to have it start in a particular folder, change the "Start In" to = `c:\working` or wherever you want.
-
-   For OS X: you have to launch Jupyter from the directory that you want to work in. One way to do this is
-   - Type `terminal` to launch the OS X Terminal
-   - Next, to have it start in a particular folder, enter the command: `cd/folder_name`
-   - After that, type `jupyter notebook` to launch Jupyter
-
-   If you don't want to enter the command `cd/folder_name` each time, you could set up a bash alias command. See this [tutorial](https://davidwalsh.name/alias-bash).
+   - For OS X: you have to launch Jupyter from the directory that you want to work in. One way to do this is
+        - Type `terminal` to launch the OS X Terminal
+        - Next, to have it start in a particular folder, enter the command: `cd/folder_name`
+        - After that, type `jupyter notebook` to launch Jupyter
+        - If you don't want to enter the command `cd/folder_name` each time, you could set up a bash alias command. See this [tutorial](https://davidwalsh.name/alias-bash).
 
 
 
@@ -73,7 +65,7 @@ It is much easier to edit sourcecode in an editor with [Revise.jl](https://githu
 1. First install with `Pkg.add("Revise")`
 2. Find the `.` files are for your account.  For example, it is usually at `cd ~` on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`
 3. Copy [.juliarc.jl](etc/.juliarc.jl) to that directory
-4. *Optional, with Atom:* At this point, you need ot use the master of Revise for Atom (but not vscode).  To do this,
+4. *Optional, with Atom (but not VS Code):* for Juno/Atom, you need to use the master of Revise.  To do this,
 ```
 Pkg.add("Revise")
 Pkg.checkout("Revise", "v0.6")
