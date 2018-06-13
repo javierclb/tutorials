@@ -132,10 +132,15 @@ Sometimes your project will have boilerplate code (like tests) that you need to 
 }
 ```
 
-This defines a snippet, `SnippetA`. You access it by typing `blahblahblah` into the VSCode editor (or accessing the snippets menu with `Ctrl + Space`. From there, the boilerplate code will appear. The `${1:xyz}` has two pieces. The number governs where your keystrokes will fill first (so in this example, what I start typing immediately after loading the snippet will fill that spot, then if I hit `tab`, what I type next will fill the second spot, and so on). Lines should be separated by `,`s. 
+This defines a snippet, `SnippetA`. You access it by typing `blahblahblah` into the VSCode editor (or accessing the snippets menu with `Ctrl + Space`. From there, the boilerplate code will appear. The `${1:xyz}` has two pieces. The number governs where your keystrokes will fill first (so in this example, what I start typing immediately after loading the snippet will fill that spot, then if I hit `tab`, what I type next will fill the second spot, and so on). Lines should be separated by `,`s. The words `array` and `element` govern what appear in those spots before I start filling them in.
 
 To create multiple snippets, simply place a `,` after the first one (i.e., after the second-to-last `}`, and repeat the code for the first one. It should have a different snippet ID (what we have as `SnippetA`). 
 
+### Project-Independent
+
+Sometimes, you'll have snippets which you want to use for a language in general, regardless of what project you're working on. 
+
+To work on these, click `Preferences -> User Snippets`, select the appropriate snippets file, and repeat the same procedure as above. 
 
 ## Other Links and Material
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) is an extension to maintain settings between different computers.  A little complicated to setup
