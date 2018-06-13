@@ -142,6 +142,10 @@ Sometimes, you'll have snippets which you want to use for a language in general,
 
 To work on these, click `Preferences -> User Snippets`, select the appropriate snippets file, and repeat the same procedure as above. 
 
+### Sharing Snippets
+
+To share snippets, just copy and paste your `{language}.json` file to somebody.
+
 ## Other Links and Material
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) is an extension to maintain settings between different computers.  A little complicated to setup
 - https://github.com/formulahendry/vscode-code-runner is another package... not sure it is useful for Julia or Python
