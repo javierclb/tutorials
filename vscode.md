@@ -150,3 +150,4 @@ To share snippets, just copy and paste your `{language}.json` file to somebody.
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) is an extension to maintain settings between different computers.  A little complicated to setup
 - https://github.com/formulahendry/vscode-code-runner is another package... not sure it is useful for Julia or Python
 - In the menu, go to `Help/Interactive Playground` to see features such as Multi-Cursor Editing, etc.
+- Lots of places in VSCode, you're asked to describe things in a format called JSON (snippets, preferences, etc.) If this format is unfamiliar to you, [this site](https://code.tutsplus.com/tutorials/understanding-json--active-8817) provides a friendly tutorial. 
