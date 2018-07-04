@@ -25,9 +25,9 @@ For more details on accessing tutorials, see [Julia Tutorials](julia/tutorials.m
 - From JuliaBox, a great place to start are the pre-installed tutorial files.  You can walk through them with a [Youtube Tutorial](https://www.youtube.com/watch?v=4igzy3bGVkQ)
 
 ## Installing Julia on your Desktop
-One option is [JuliaPro](https://juliacomputing.com/products/juliapro.html) as an easy way to get started and play around with Juila.  However, the issue with JuliaPro is that you are basically unable to update your packages, so ultimately you may want to install Julia separately.
+One option is [JuliaPro](https://juliacomputing.com/products/juliapro.html) as an easy way to get started and play around with Juila.  However, the issue with JuliaPro is that you are basically unable to update your packages, so ultimately you may want to install Julia separately.  It is **not recommended** at this point.
 
-Alternatively, to install Julia separately you can follow [First Steps](https://lectures.quantecon.org/jl/getting_started.html#first-steps).  Alternatively, for the impatient the summary of links to download and install is:
+To install Julia separately you can follow [First Steps](https://lectures.quantecon.org/jl/getting_started.html#first-steps).  Alternatively, for the impatient the summary of links to download and install is:
 
 1. [Git](https://git-scm.com/downloads). 
 	- This is the "version control system" that Julia uses to manage packages, and that coders use to manage software. 
