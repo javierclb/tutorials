@@ -23,9 +23,10 @@ Many features in VS Code are found through the Command Palette which can be acce
 2. *Optional*: Install [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) 
     - Not required, but a good idea since [Markdown](markdown.md) is pervasive
     - For TOC compatability with github, go to the User Settings with `Ctrl+,` and then set `"markdown.extension.toc.githubCompatibility": true`
-    - To have it show a preview immediately when you open one of the files, set `"markdown.extension.preview.autoShowPreviewToSide": true`
-3. *Optional:* It is convenient to globally change the word wrap, so choose `Ctrl+,` and then set `"editor.wordWrap": "on",
-4. *Optional*: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
+    - To have it show a preview immediately when you open one of the files, set`"markdown.extension.preview.autoShowPreviewToSide": true`
+3. *Optional:* It is convenient to globally change the word wrap, so choose `Ctrl+,` and then set `"editor.wordWrap": "on"`
+4. *Optional:* It is convenient to make VSCode reload files automatically when loaded externally. To do this, so choose `Ctrl+,` and then set `"files.useExperimentalFileWatcher": true`
+5. *Optional*: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
 
 ## Setup for Julia
 1. Ensure that [VS Code](https://github.com/Microsoft/vscode) and [Julia](julia.md) are installed
