@@ -2,7 +2,6 @@
     - [Classic Example (and the Trickiness of Generic Programming)](#classic-example-and-the-trickiness-of-generic-programming)
     - [Some Principles](#some-principles)
     - [Packages, Tools, and References for Julia Performance](#packages-tools-and-references-for-julia-performance)
-    - [Bechmarking](#bechmarking)
 
 # Performance and Benchmarking
 Julia code *can* be extremely fast, but isn't necessarily fast if you make "mistakes". Most of the mistakes involve making the compiler mix and match types which it isn't necessary.
@@ -10,7 +9,6 @@ Julia code *can* be extremely fast, but isn't necessarily fast if you make "mist
 ## Classic Example (and the Trickiness of Generic Programming)
 A [classic example](https://docs.julialang.org/en/latest/manual/performance-tips/#Write-%22type-stable%22-functions-1) is the seemingly innocuous function returning zero if a value is negative
 ```julia
-using BenchmarkTools
 pos(x) = x < 0 ? 0 : x
 ```
 What is wrong with it?  Nothing if you call it with an integer, which returns an `Int64`,
@@ -37,15 +35,17 @@ pos(x) = x < zero(x) ? zero(x) : x #or f(x) = x < zero(typeof(x)) ? zero(typeof(
 
 Performance is always measured with benchmarking tools,
 ```julia
-julia> @btime f(1)
+julia> using BenchmarkTools
+
+julia> @btime pos_1(1)
   1.499 ns (0 allocations: 0 bytes)
 1
 
-julia> @btime f(1.0)
+julia> @btime pos_2(1.0)
   1.599 ns (0 allocations: 0 bytes)
 1.0
 
-julia> @btime f_2(1.0)
+julia> @btime pos(1.0)
   1.499 ns (0 allocations: 0 bytes)
 1.0
 ```
@@ -68,6 +68,4 @@ These notes are intended to help guide optimizing code for high performance.  So
 
 ## Packages, Tools, and References for Julia Performance
 - Key documents are in [Julia Performance Tips](https://docs.julialang.org/en/stable/manual/performance-tips/)
-- 
-
-## Bechmarking 
+- https://github.com/MikeInnes/Traceur.jl
