@@ -4,6 +4,7 @@
 - [Markdown](markdown.md)
 - [Latex](latex.md)
 - [Julia](julia.md) - With additional notes in [Julia Notes](/julia/README.md)
+- [Python](python.md)
 
 # Setup and dot Files
  - [Julia Setup](etc/setup.jl)
