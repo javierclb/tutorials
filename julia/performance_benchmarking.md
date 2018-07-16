@@ -3,7 +3,7 @@
     - [Some Principles](#some-principles)
     - [Packages, Tools, and References for Julia Performance](#packages-tools-and-references-for-julia-performance)
 
-# Performance and Benchmarking
+# Performance, Benchmarking, and Profiling
 Julia code *can* be extremely fast, but isn't necessarily fast if you make "mistakes". Most of the mistakes involve making the compiler mix and match types which it isn't necessary.
 
 ## Classic Example (and the Trickiness of Generic Programming)
@@ -65,6 +65,9 @@ These notes are intended to help guide optimizing code for high performance.  So
     - After it is working and tested, faster code using comes from converting to loops
 
 6. Rely on external libraries wherever possible, as they are more likely to have many pairs of eyes looking for ways to optimize performance.
+
+## Repeated Benchmarking as Part of Tests
+See [Benchmark Regression Testing](benchmark_regressions.md)
 
 ## Packages, Tools, and References for Julia Performance
 - Key documents are in [Julia Performance Tips](https://docs.julialang.org/en/stable/manual/performance-tips/)
