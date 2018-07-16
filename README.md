@@ -4,6 +4,8 @@
 - [Markdown](markdown.md)
 - [Latex](latex.md)
 - [Julia](julia.md) - With additional notes in [Julia Notes](/julia/README.md)
+    -  [Julia Performance](julia/performance_bechmarking.md)
+    -  [Julia Bechmark Testing](julia/benchmark_regressions.md)
 - [Python](python.md)
 
 # Setup and dot Files
