@@ -43,6 +43,7 @@ A **package** is a collection of modules (software library) organized under a si
 * [Matplotlib](http://matplotlib.org) - 2D and 3D plotting 
 * [SciPy](http://scipy.org) - linear algebra, differential equations, statistics, Fourier transforms, signal processing, etc.
 * [pandas](http://pandas.pydata.org) - data analysis
+
 You can check out the [Python Package Index](https://pypi.python.org/pypi) for **all** the available Python packages.
 
 ## Example: QuantEcon 
@@ -54,14 +55,45 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    ```
    !pip install quantecon
    ````
-   into a cell that is in *edit mode*. After installation, you can import the *QuantEcon* package (or any Python package, see [PyPI](https://pypi.org) into our workspace using the `import` command. It is convenient to import a package with a concise name. For exmaple, the standard conventino for importing *QuantEcon* is as below:
-    ```julia
-    include("setup.jl")
-    ```
+   into a cell that is in *edit mode*. 
+   
+   After installation, you can import the *QuantEcon* package (or any Python package, see [PyPI](https://pypi.org)） into our workspace using the `import` command. It is convenient to import a package with a concise name. For exmaple, the standard importing convention for *QuantEcon* is as follows: 
+   ```
+   import quantecon as qe
+   ```
 
 ## Example: Plotting functions 
 ### Creating NumPy Arrays 
-   Same as before, we can import the NumPy package into our workspace using the `import` command. It is convenient to import a package with a concise name. For exmaple, the standard conventino for importing NumPy is as below: 
-
+   Same as before, we can load the *NumPy* package into our workspace using the `import` command:
+   ```
+    import numpy as np
+   ```
+   To see what is available in this package, just enter `np.<TAB>` (which means type np. into a cell that is in *edit mode* and then hit the TAB key). To check what a specific function is, for example `np.exp`, simply type a question mark behind the function `np.exp?`. 
+   Now let's see a simple exmaple. Let's make a NumPy array of values from 0 to 3<\pi> consisting of 1000 evenly spaced points:
+   ```
+   x = np.linspace(0,3*np.pi,1000)
+   ```
+   Now let's use this array of *x* values to generate an array of *y* values *y=sin(x)* Just as before, you can first type `np.sin?` to see the documentation for the sine function in NumPy. Notice that the input is meant to be a NumPy array of values then `np.sin(x)` evaluates sine elementwise - that is, sine applied to every value in the array of x: 
+   ```
+   y = np.sin(x)
+   ```
+   ### Plotting with Matplotlib
+   Once we have generated the arrays, we can plot all the points using Python's main plotting package *Matplotlib* Same as before, we import *Matplotlib* into our workspace using the `import` command. However, here we will only need to use its subpackage called *Matplotlib.pyplot* and the standard conventino for importing it is as follows:
+   ```
+   import matplotlib.pyplot as plt
+   ```
+   The final preparation we need is to instruct the kernel to display our figures inline using the command: 
+   ```
+   %matplotlib inline
+   ```
+   Now  we can plot the function *f(x)=cos(x) for x \in [0,3pi]: 
+   ```
+   plt.plot(x,y)
+   ```
+  
+   
+   ## Excercise 1.
+   Plot the function function $f(x)=e^((-x^2)/100)*cos(x)$
+   
 
 
