@@ -88,10 +88,12 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    ```
    %matplotlib inline
    ```
-   Now  we can plot the function *f(x)=cos(x) for x in [0,3]
+   Now  we can plot the function *f(x)=cos(x)* for x in [0,3]
    ```
    plt.plot(x,y)
    ```
+   ![Plot](https://05971e22-a-62cb3a1a-s-sites.googlegroups.com/site/pythonprojectsforecon/butterflycurveexample/Screen%20Shot%202018-07-17%20at%2012.25.32%20PM.png?attachauth=ANoY7co8GjNGLRQ9OqoBJ73SI6pEekk-ZOXPFh1a0Q7EMq_KIOFr82XqVnvz-d0MznCeb1T_OdmqlG2nHMvAaLY1Qj3velyZtthQkMiS-GV1l3jC7-EEhvVAnj4fXZ57ptjFYdlRPGXSyNNgYEW8NA8z4ogUO1NC0R767eft0Cug6latjYiWg_kDuQLDDekRbgOvF79ygxwagdziauDxcoSETLYbF2DcaXb1rJBbxxAPwKIeaLy7xRzzS0RLfzLfb0sKSzmmBvIUYAyP4fMEmIbuTJ8E4PFVt80g8zDjvxoAqcKEn8EyxRY%3D&attredirects=0)
+   
    ### Summary for Plotting 
    In fact, the basic procedure for plotting is: 
    1. Make an array of x values 
@@ -102,7 +104,7 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    You can check out the [pyplot](https://matplotlib.org/api/pyplot_summary.html) documentation for more options. 
   
    Let's see an interesting demonstration on how to plot the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_%28transcendental%29)!  
-   ![Butterfly curve](https://www.google.com/search?hl=en-CA&tbs=sbi%3AAMhZZiuEtnvTw_1SeWwO07dmy9vXwy7uKasCCXkXRhN-jK2K1lbKk-KcK2IH00urvD8sTbcIB1itfTLj4KJF12P2iM70aHmlMHbn4xUjZlO9mR1g8ymkOFyZBs1F0Mbj46RuHXj9Bdt5l6P6_17MI7FZhzeGPhP91STe23DCBfQLl_1cBN-6NMKJ0e0gbkR3NjsMPgVLes3-w9Iu6kmpO_1Lfkwy6WOzi0gjdwPQXXPhsGi2vgS5O6uDRZRhOkz_14FcD8PPsDIa8CbAxGEnG6hPJKe8jLtQFMuCBiaUQj73y7jzWmMmjjfhdACYYK3teaB8U7HgT0mrefS60j6ZjGRAOzKNFEnj30EbBuA&ei=kUROW6TtBtOC_wSww63QAQ&q=butterfly+curve&oq=butterfly+curve&gs_l=psy-ab.3...0.0.0.13458.0.0.0.0.0.0.0.0..0.0....0...1..64.psy-ab..0.0.0....0.naXtARs59Jg#)
+   ![Butterfly curve](https://05971e22-a-62cb3a1a-s-sites.googlegroups.com/site/pythonprojectsforecon/butterflycurveexample/Screen%20Shot%202018-07-17%20at%2012.25.20%20PM.png?attachauth=ANoY7cqLwuPEItbPIpqIaBHbzs0qjae2bCyGAeOCxA6813J4N2IJDBXuYtre7Ya0sDd0Zz85fiZLSY9TR3HTnqqGtgD_M3F8e4nW1lwjcCcW1IEPV4lmuQ09eKBGZnQCoMC3xY8MFC_WIjBonCMhEKps7-lHrxS1TfiFP5wlDo4q98I9Nlt_ewmOmHBCHvyc6jUulWZufPPSHcoa50rumhJLqWMrHNN0eG3hrEnj6uQsBoo27Fa4VK41qx_A1uhvJydswfMyXvaZ2unEURC9pC-4xGHpBb2hUzHsj1zhqq38WZb-UL1_Fx4%3D&attredirects=0)
    
 
 
