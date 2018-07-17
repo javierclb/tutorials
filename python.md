@@ -23,7 +23,7 @@ This is recommended. Once you go onto http://www.jupyter.org, choose the second 
 There are several ways to set up your Python environment: 
 1. Installing Jupyter Notebook by using the Anaconda distribution
    
-   This is a great choice to set up your devleopment environment especially if you are new to Python. Read through https://lectures.quantecon.org/py/getting_started.html to get an idea of the installation procedure as well as how to work with Jupyter Notebooks. You can also follow the steps below for basic setup:
+   This is a great choice to set up your development environment especially if you are new to Python. Read through https://lectures.quantecon.org/py/getting_started.html to get an idea of the installation procedure as well as how to work with Jupyter Notebooks. You can also follow the steps below for basic setup:
    - Download [conda](https://www.anaconda.com/download/) 
    - Once you have installed Anaconda, you can start the Jupyter Notebook by either (1) launching Jupyter in your applications menu or (2) opening up a terminal and type `jupyter notebook` folllowing the `$` sign. The Jupyter Notebook application will be opened in your default browser automatically. 
    - Now, simply create a new Jupyter Notebook using the *New* dropdown menu and select option *Python 3* or similar to open a new Notebook for Python. Once you enter the Notebook, you can see Help in the menu above for more **Notebook Help** and **User Interface Tour**.
@@ -46,11 +46,22 @@ A **package** is a collection of modules (software library) organized under a si
 You can check out the [Python Package Index](https://pypi.python.org/pypi) for **all** the available Python packages.
 
 ## Example: QuantEcon 
-
+   You can install [QuantEcon.py](https://quantecon.org/quantecon-py) by opening up a terminal and entering the command 
+   ```
+   pip install quantecon
+   ```
+   Alternately, you could also just type
+   ```
+   !pip install quantecon
+   ````
+   into a cell that is in *edit mode*. After installation, you can import the *QuantEcon* package (or any Python package, see [PyPI](https://pypi.org) into our workspace using the `import` command. It is convenient to import a package with a concise name. For exmaple, the standard conventino for importing *QuantEcon* is as below:
+    ```julia
+    include("setup.jl")
+    ```
 
 ## Example: Plotting functions 
 ### Creating NumPy Arrays 
-   We can import the NumPy package (
+   Same as before, we can import the NumPy package into our workspace using the `import` command. It is convenient to import a package with a concise name. For exmaple, the standard conventino for importing NumPy is as below: 
 
 
 
