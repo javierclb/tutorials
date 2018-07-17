@@ -27,7 +27,7 @@ There are several ways to set up your Python environment:
    - Download [conda](https://www.anaconda.com/download/) 
    - Once you have installed Anaconda, you can start the Jupyter Notebook by either (1) launching Jupyter in your applications menu or (2) opening up a terminal and type `jupyter notebook` folllowing the `$` sign. The Jupyter Notebook application will be opened in your default browser automatically. 
    - Now, simply create a new Jupyter Notebook using the *New* dropdown menu and select option *Python 3* or similar to open a new Notebook for Python. Once you enter the Notebook, you can see Help in the menu above for more **Notebook Help** and **User Interface Tour**.
-   - Note: Scroll down and you will find an introduction to basic Python commands and packages that are useful for economics. A test program will also be given for students to get an idea of what Jupyter Notebooks could do. 
+   - Note: Scroll down and you will find an introduction to basic Python commands and packages that are useful for economics. Examples will also be given for students to get an idea how to work with packages and LaTeX.  
    
 2. 
    
@@ -57,7 +57,7 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    ````
    into a cell that is in *edit mode*. 
    
-   After installation, you can import the *QuantEcon* package (or any Python package, see [PyPI](https://pypi.org)） into our workspace using the `import` command. It is convenient to import a package with a concise name. For exmaple, the standard importing convention for *QuantEcon* is as follows: 
+   After installation, you can import the *QuantEcon* package (or any Python package, see [PyPI](https://pypi.org)) into our workspace using the `import` command. It is convenient to import a package with a concise name. For exmaple, the standard importing convention for *QuantEcon* is as follows: 
    ```
    import quantecon as qe
    ```
@@ -69,10 +69,12 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
     import numpy as np
    ```
    To see what is available in this package, just enter `np.<TAB>` (which means type np. into a cell that is in *edit mode* and then hit the TAB key). To check what a specific function is, for example `np.exp`, simply type a question mark behind the function `np.exp?`. 
-   Now let's see a simple exmaple. Let's make a NumPy array of values from 0 to 3<\pi> consisting of 1000 evenly spaced points:
+   
+   Now let's see a simple example. Let's make a NumPy array of values from 0 to 3 consisting of 1000 evenly spaced points:
    ```
-   x = np.linspace(0,3*np.pi,1000)
+   x = np.linspace(0,3,1000)
    ```
+   
    Now let's use this array of *x* values to generate an array of *y* values *y=sin(x)* Just as before, you can first type `np.sin?` to see the documentation for the sine function in NumPy. Notice that the input is meant to be a NumPy array of values then `np.sin(x)` evaluates sine elementwise - that is, sine applied to every value in the array of x: 
    ```
    y = np.sin(x)
@@ -86,14 +88,21 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    ```
    %matplotlib inline
    ```
-   Now  we can plot the function *f(x)=cos(x) for x \in [0,3pi]: 
+   Now  we can plot the function *f(x)=cos(x) for x in [0,3]
    ```
    plt.plot(x,y)
    ```
-  
+   ### Summary for Plotting 
+   In fact, the basic procedure for plotting is: 
+   1. Make an array of x values 
+   2. Use the array of x values to create an array of y values 
+   3. Enter *plt.plot(x,y) 
+   4. Add style to the plot usign various *pyplot* commands such as *plt.xlabel, plt.xlim, plt.title*, etc. 
    
-   ## Excercise 1.
-   Plot the function function $f(x)=e^((-x^2)/100)*cos(x)$
+   You can check out the [pyplot](https://matplotlib.org/api/pyplot_summary.html) documentation for more options. 
+  
+   Let's see an interesting demonstration on how to plot the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_%28transcendental%29)!  
+   ![Butterfly curve](https://www.google.com/search?hl=en-CA&tbs=sbi%3AAMhZZiuEtnvTw_1SeWwO07dmy9vXwy7uKasCCXkXRhN-jK2K1lbKk-KcK2IH00urvD8sTbcIB1itfTLj4KJF12P2iM70aHmlMHbn4xUjZlO9mR1g8ymkOFyZBs1F0Mbj46RuHXj9Bdt5l6P6_17MI7FZhzeGPhP91STe23DCBfQLl_1cBN-6NMKJ0e0gbkR3NjsMPgVLes3-w9Iu6kmpO_1Lfkwy6WOzi0gjdwPQXXPhsGi2vgS5O6uDRZRhOkz_14FcD8PPsDIa8CbAxGEnG6hPJKe8jLtQFMuCBiaUQj73y7jzWmMmjjfhdACYYK3teaB8U7HgT0mrefS60j6ZjGRAOzKNFEnj30EbBuA&ei=kUROW6TtBtOC_wSww63QAQ&q=butterfly+curve&oq=butterfly+curve&gs_l=psy-ab.3...0.0.0.13458.0.0.0.0.0.0.0.0..0.0....0...1..64.psy-ab..0.0.0....0.naXtARs59Jg#)
    
 
 
