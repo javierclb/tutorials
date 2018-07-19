@@ -15,7 +15,7 @@ This is a kind of dictionary you can fill with specific benchmarks; e.g.
 foo(x) = x^2 
 
 srand(1234) # Seed the random number generator, so the results are deterministic. 
-benchmarks["squaring"] = @benchmarkable foo.($(rand(100))) See below for meaning of $
+benchmarks["squaring"] = @benchmarkable foo.($(rand(100))) #See below for meaning of $
 benchmarks["integer"] = @benchmarkable foo.($(rand(1:1000, 400)))
 ```
 
@@ -49,13 +49,13 @@ BenchmarkTools.TrialEstimate:
 
 ## Comparing and Saving Results 
 
-Saving can be done via `BenchmarkTools.save("filename.json", "results")`. This will define a `JSON` file, 
+Saving can be done via `BenchmarkTools.save("benchmarks.json", "results")`. This will define a `JSON` file, 
 which can be read using `BenchmarkTools.load()`. 
 
 To compare, use the following workflow:
 
 ```julia
-julia> old = BenchmarkTools.load("oldresults.json")[1]
+julia> old = BenchmarkTools.load("benchmarks.json")[1]
 julia> new = medians
 julia> judge(old, new)
 
@@ -74,3 +74,26 @@ BenchmarkTools.TrialJudgement:
   time:   +0.00% => invariant (5.00% tolerance)
   memory: +0.00% => invariant (1.00% tolerance)
 ```
+
+## Adding Benchmarks to a Package or Project
+For consistency, name the `.json` file `benchmarks.json` and have it directly located inside of the packages `/test` folder.  Within that folder, create a file called `runbenchmarks.jl` with code such as the following
+```julia
+#Create benchmark group and benchmarks
+benchmarks = BenchmarkGroup()
+#Put in specific benchmarks
+x = 5.0
+benchmark["squaring"] = @benchmarkable $x^2 #Add in package specific ones.
+#...
+
+results = run(benchmarks)
+
+#Compare to old results
+try
+  oldresults= BenchmarkTools.load("benchmarks.json")[1]
+  judge(oldresults, results)
+catch err
+  ("Error loading benchmarks.json", err.msg)
+end
+#To save results, manually call in the REPL: BenchmarkTools.save("benchmarks.json", results)
+```
+See [Expectations.jl Tests](https://github.com/econtoolkit/Expectations.jl/tree/master/test) for an example.
