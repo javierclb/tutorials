@@ -76,24 +76,36 @@ BenchmarkTools.TrialJudgement:
 ```
 
 ## Adding Benchmarks to a Package or Project
-For consistency, name the `.json` file `benchmarks.json` and have it directly located inside of the packages `/test` folder.  Within that folder, create a file called `runbenchmarks.jl` with code such as the following
+
+For consistency, name the `.json` file `benchmarks.json` and have it directly located inside of the packages `/test` folder. Within that folder, create a file called `runbenchmarks.jl` with code such as the following
+
 ```julia
+# Import dependency. 
+using BenchmarkTools 
+
 #Create benchmark group and benchmarks
 benchmarks = BenchmarkGroup()
 #Put in specific benchmarks
+foo(x) = x^2
 x = 5.0
-benchmark["squaring"] = @benchmarkable $x^2 #Add in package specific ones.
+benchmarks["squaring"] = @benchmarkable foo($x) #Add in package specific ones.
 #...
 
-results = run(benchmarks)
+results = run(benchmarks) # Get results. 
+results = median(results) # Condense to median. 
+
+# To save results, manually call in the REPL: BenchmarkTools.save("test/benchmarks.json", results)
 
 #Compare to old results
 try
-  oldresults= BenchmarkTools.load("benchmarks.json")[1]
+  oldresults= BenchmarkTools.load("test/benchmarks.json")[1]
   judge(oldresults, results)
 catch err
-  ("Error loading benchmarks.json", err.msg)
+  error("Couldn't load file- make sure that you've previously saved results.", err.prefix)
 end
-#To save results, manually call in the REPL: BenchmarkTools.save("benchmarks.json", results)
 ```
 See [Expectations.jl Tests](https://github.com/econtoolkit/Expectations.jl/tree/master/test) for an example.
+
+:warning: The `test/...` assumes your project is setup in the standard way, and that you followed the 
+tutorials (e.g., running from VS Code, whose REPL runs at the package level). YMMV if you are using a 
+custom configuration. 
