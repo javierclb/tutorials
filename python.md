@@ -23,22 +23,29 @@ This is recommended. Once you go onto http://www.jupyter.org, choose the second 
 There are several ways to set up your Python environment: 
 1. Installing Jupyter Notebook by using the Anaconda distribution
    
-   This is a great choice to set up your development environment especially if you are new to Python. Read through https://lectures.quantecon.org/py/getting_started.html to get an idea of the installation procedure as well as how to work with Jupyter Notebooks. You can also follow the steps below for basic setup:
+   This is a great choice to set up your development environment especially if you are **new** to Python. It may not be necessary if you already have a compelte installation of Python and its package managers. Read through https://lectures.quantecon.org/py/getting_started.html to get an idea of the installation procedure as well as how to work with Jupyter Notebooks. You can also follow the steps below for basic setup:
    - Download [conda](https://www.anaconda.com/download/) 
    - Once you have installed Anaconda, you can start the Jupyter Notebook by either (1) launching Jupyter in your applications menu or (2) opening up a terminal and type `jupyter notebook` folllowing the `$` sign. The Jupyter Notebook application will be opened in your default browser automatically. 
    - Now, simply create a new Jupyter Notebook using the *New* dropdown menu and select option *Python 3* or similar to open a new Notebook for Python. Once you enter the Notebook, you can see Help in the menu above for more **Notebook Help** and **User Interface Tour**.
    - Note: Scroll down and you will find an introduction to basic Python commands and packages that are useful for economics. Examples will also be given for students to get an idea how to work with packages and LaTeX.  
    
-2. 
-   
-- In [VS Code](vscode.md) install https://marketplace.visualstudio.com/items?itemName=ms-python.python  ?
+2. Installing Jupyter Notebook by using the Python’s package manager pip
+
+    Optional. This is an alternative for **experienced** Python users. You could simply just install Jupyter using Python's package manager, [pip]() instead of Anaconda. To do this, first ensure that you have the latest pip by typing `pip3 install --update pip` and then install Jupyter Notebook using `pip3 install jupyter`. 
+    
+3. Setup for Python using [VS Code](https://github.com/econtoolkit/tutorials/blob/master/vscode.md)
+   - Install [VS Code](https://code.visualstudio.com) and the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+   - Install a version of Pyton 3. 
+     1. (MacOS) 
+
+
 - Give a simple example of how to run that script and see a plot (i.e. matlplotlib from the python interpreter there)
 - 
 
 
 # Python Packages 
 A **package** is a collection of modules (software library) organized under a single name for distribution and each package contains subpackages and modules filled with lots of tools for scientific computing. See [packages](https://docs.python.org/3/tutorial/modules.html#packages) for more information. Some widely-used packages include: 
-* [QuantEcon.py](https://quantecon.org/quantecon-py) - economics 
+* [QuantEcon.py](https://quantecon.org/quantecon-py) - quantitative economics 
 * [NumPy](http://www.numpy.org) - arrays and vectorized mathematical functions
 * [Matplotlib](http://matplotlib.org) - 2D and 3D plotting 
 * [SciPy](http://scipy.org) - linear algebra, differential equations, statistics, Fourier transforms, signal processing, etc.
@@ -61,7 +68,8 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    ```
    import quantecon as qe
    ```
-
+   Check out the [documentation](http://quanteconpy.readthedocs.io/en/latest/) and [examples](https://lectures.quantecon.org) of *QuantEcon.py* here. 
+   
 ## Example: Plotting functions 
 ### Creating NumPy Arrays 
    Same as before, we can load the *NumPy* package into our workspace using the `import` command:
