@@ -94,11 +94,11 @@ benchmarks["squaring"] = @benchmarkable foo($x) #Add in package specific ones.
 results = run(benchmarks) # Get results. 
 results = median(results) # Condense to median. 
 
-# To save results, manually call in the REPL: BenchmarkTools.save("test/benchmarks.json", results)
+# To save results, manually call in the REPL: BenchmarkTools.save("benchmarks.json", results)
 
 #Compare to old results
 try
-  oldresults= BenchmarkTools.load("test/benchmarks.json")[1]
+  oldresults= BenchmarkTools.load("benchmarks.json")[1]
   judge(oldresults, results)
 catch err
   error("Couldn't load file- make sure that you've previously saved results.", err.prefix)
@@ -106,6 +106,4 @@ end
 ```
 See [Expectations.jl Tests](https://github.com/econtoolkit/Expectations.jl/tree/master/test) for an example.
 
-:warning: The `test/...` assumes your project is setup in the standard way, and that you followed the 
-tutorials (e.g., running from VS Code, whose REPL runs at the package level). YMMV if you are using a 
-custom configuration. 
+:warning: Make sure that the REPL or environment where you are running this file is the `test/` folder (say, by running `cd test` in VS Code). Otherwise, the `benchmarks.json` file will save in the top-level package. 
