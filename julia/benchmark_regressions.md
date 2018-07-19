@@ -1,52 +1,109 @@
-- [Benchmark Regression Testing](#benchmark-regression-testing)
-    - [Simple example of a few trials (in separate files)](#simple-example-of-a-few-trials-in-separate-files)
-    - [Using and Serializing Benchmark Groups](#using-and-serializing-benchmark-groups)
 # Benchmark Regression Testing
 This is intended to describes ways to ensure that there are no performance regresions in code (i.e., changes in the code that still pass the regression test, but have major performance differences).
 
-The basic idea is that you can use [BenchmarkTools.jl](https://github.com/JuliaCI/BenchmarkTools.jl) to run benchmarks, save the results as a baseline in Github, and then run a script to compare the results.
+## Defining a BenchmarkGroup 
 
-For the most part, we want to store `BenchmarkTools.TrialEstimate` in github rather than the entire benchmark, or else the files would be huge.
+First, create an empty `BenchmarkGroup` object: 
 
-## Simple example of a few trials (in separate files)
-First, lets define a function
 ```julia
-using BenchmarkTools
-f(x) = x^2
-x0 = 1.0
-xvec = [1, 2, 3]
-
-;pwd #Just to see location of files
-```
-Next, lets say that we wanted to save the benchmarks into a file, choosing the `median` trial.
-```julia
-#To run and save a single trial for comparison later.
-b1 = @benchmark f($x0) #ALWAYS splice, or it could be a global variable
-b2 = @benchmark f.($xvec) #ALWAYS splice, or it could be a global variable
-
-#Want to save the median results as a trial
-BenchmarkTools.save("t1.json", median(b1))
-BenchmarkTools.save("t2.json", median(b2))
-```
-Later, these files can be loaded and compared with `judge` and `ratio`
-```julia
-#Later, can load up the original
-t1_old = BenchmarkTools.load("t1.json")[1] #Returns a vector
-t2_old = BenchmarkTools.load("t2.json")[1]
-
-#And can run and compare
-t1 = median(@benchmark f($x0))
-judge(ratio(t1, t1_old))
-# example output:
-#BenchmarkTools.TrialJudgement: 
-#  time:   +18.75% => regression (5.00% tolerance)
-#  memory: +0.00% => invariant (1.00% tolerance)
+benchmarks = BenchmarkGroup()
 ```
 
-## Using and Serializing Benchmark Groups
-TBD
+This is a kind of dictionary you can fill with specific benchmarks; e.g. 
 
-See https://github.com/JuliaCI/BenchmarkTools.jl/blob/master/doc/manual.md#working-with-trial-data-in-a-benchmarkgroup
+```julia 
+foo(x) = x^2 
 
-https://github.com/JuliaCI/BenchmarkTools.jl/blob/master/test/SerializationTests.jl
-I think that the benchmark groups serialize back and forth well with JSON using `load` and `save` as above.
+srand(1234) # Seed the random number generator, so the results are deterministic. 
+benchmarks["squaring"] = @benchmarkable foo.($(rand(100))) #See below for meaning of $
+benchmarks["integer"] = @benchmarkable foo.($(rand(1:1000, 400)))
+```
+
+:warning: Make sure you always interpolate outside functions and variables using `$(blahblah)`. 
+
+## Getting and Simplifying Results 
+
+Get the results using: 
+
+```julia
+results = run(benchmarks)
+```
+
+The results will be filled with `Trial` objects, which usually have more data than we need. So
+you can run some sample statistics; e.g. 
+
+```julia
+julia> medians = median(results)
+2-element BenchmarkTools.BenchmarkGroup:
+  tags: []
+  "integer" => TrialEstimate(271.113 ns)
+  "squaring" => TrialEstimate(265.201 ns)
+
+julia> medians["squaring"]
+BenchmarkTools.TrialEstimate: 
+  time:             265.201 ns
+  gctime:           0.000 ns (0.00%)
+  memory:           1.75 KiB
+  allocs:           2
+```
+
+## Comparing and Saving Results 
+
+Saving can be done via `BenchmarkTools.save("benchmarks.json", "results")`. This will define a `JSON` file, 
+which can be read using `BenchmarkTools.load()`. 
+
+To compare, use the following workflow:
+
+```julia
+julia> old = BenchmarkTools.load("benchmarks.json")[1]
+julia> new = medians
+julia> judge(old, new)
+
+julia> judge(old, medians)
+2-element BenchmarkTools.BenchmarkGroup:
+  tags: []
+  "integer" => TrialJudgement(+0.00% => invariant)
+  "squaring" => TrialJudgement(+0.00% => invariant)
+```
+
+For more granular information, you can inspect each field: 
+
+```julia
+julia> judge(old, medians)["integer"]
+BenchmarkTools.TrialJudgement:
+  time:   +0.00% => invariant (5.00% tolerance)
+  memory: +0.00% => invariant (1.00% tolerance)
+```
+
+## Adding Benchmarks to a Package or Project
+
+For consistency, name the `.json` file `benchmarks.json` and have it directly located inside of the packages `/test` folder. Within that folder, create a file called `runbenchmarks.jl` with code such as the following
+
+```julia
+# Import dependency. 
+using BenchmarkTools 
+
+#Create benchmark group and benchmarks
+benchmarks = BenchmarkGroup()
+#Put in specific benchmarks
+foo(x) = x^2
+x = 5.0
+benchmarks["squaring"] = @benchmarkable foo($x) #Add in package specific ones.
+#...
+
+results = run(benchmarks) # Get results. 
+results = median(results) # Condense to median. 
+
+# To save results, manually call in the REPL: BenchmarkTools.save("benchmarks.json", results)
+
+#Compare to old results
+try
+  oldresults= BenchmarkTools.load("benchmarks.json")[1]
+  judge(oldresults, results)
+catch err
+  error("Couldn't load file- make sure that you've previously saved results.", err.prefix)
+end
+```
+See [Expectations.jl Tests](https://github.com/econtoolkit/Expectations.jl/tree/master/test) for an example.
+
+:warning: Make sure that the REPL or environment where you are running this file is the `test/` folder (say, by running `cd test` in VS Code). Otherwise, the `benchmarks.json` file will save in the top-level package. 
