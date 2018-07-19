@@ -27,7 +27,7 @@ There are several ways to set up your Python environment:
    - Download [conda](https://www.anaconda.com/download/) 
    - Once you have installed Anaconda, you can start the Jupyter Notebook by either (1) launching Jupyter in your applications menu or (2) opening up a terminal and type `jupyter notebook` folllowing the `$` sign. The Jupyter Notebook application will be opened in your default browser automatically. 
    - Now, simply create a new Jupyter Notebook using the *New* dropdown menu and select option *Python 3* or similar to open a new Notebook for Python. Once you enter the Notebook, you can see Help in the menu above for more **Notebook Help** and **User Interface Tour**.
-   - Note: Scroll down and you will find an introduction to basic Python commands and packages that are useful for economics. Examples will also be given for students to get an idea how to work with packages and LaTeX.  
+   - Note: Scroll down to find an introduction to basic Python commands and packages that are useful for economics. 
    
 2. Installing Jupyter Notebook by using the Python’s package manager pip
 
@@ -45,10 +45,7 @@ There are several ways to set up your Python environment:
      
    - Step 3: For *Windows* users, run `path` at the command prompt to ensure the location of your Python interpreter is included in your PATH environment. If the Python interpreter's folder is not included, open Windows Settings, serch for "environment", select **Edit environment variables for your account**, then edit the Path variable to include that folder. 
    - Step 4: Select a Python interpreter within VS Code. Start VS Code, open the Command Palette (⇧⌘P), type **Python: Select Interpreter**, then hit enter. If the **Select Python Environment** option is available on the Status Bar, you may use that as well. 
-   
-
-- Give a simple example of how to run that script and see a plot (i.e. matlplotlib from the python interpreter there)
-
+   - Note: Scroll down to find a simple example of how to run scripts and see a plot 
 
 
 # Python Packages 
@@ -61,7 +58,7 @@ A **package** is a collection of modules (software library) organized under a si
 
 You can check out the [Python Package Index](https://pypi.python.org/pypi) for **all** the available Python packages.
 
-## Example: QuantEcon 
+## Jupyter Example: QuantEcon 
    You can install [QuantEcon.py](https://quantecon.org/quantecon-py) by opening up a terminal and entering the command 
    ```
    pip install quantecon
@@ -78,7 +75,7 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    ```
    Check out the [documentation](http://quanteconpy.readthedocs.io/en/latest/) and [examples](https://lectures.quantecon.org) of *QuantEcon.py* here. 
    
-## Example: Plotting functions 
+## Jupyter Example: Plotting functions 
 ### Creating NumPy Arrays 
    Same as before, we can load the *NumPy* package into our workspace using the `import` command:
    ```
@@ -122,5 +119,28 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    Let's see an interesting demonstration on how to plot the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_%28transcendental%29)!  
    ![Butterfly curve](https://05971e22-a-62cb3a1a-s-sites.googlegroups.com/site/pythonprojectsforecon/butterflycurveexample/Screen%20Shot%202018-07-17%20at%2012.25.20%20PM.png?attachauth=ANoY7cqLwuPEItbPIpqIaBHbzs0qjae2bCyGAeOCxA6813J4N2IJDBXuYtre7Ya0sDd0Zz85fiZLSY9TR3HTnqqGtgD_M3F8e4nW1lwjcCcW1IEPV4lmuQ09eKBGZnQCoMC3xY8MFC_WIjBonCMhEKps7-lHrxS1TfiFP5wlDo4q98I9Nlt_ewmOmHBCHvyc6jUulWZufPPSHcoa50rumhJLqWMrHNN0eG3hrEnj6uQsBoo27Fa4VK41qx_A1uhvJydswfMyXvaZ2unEURC9pC-4xGHpBb2hUzHsj1zhqq38WZb-UL1_Fx4%3D&attredirects=0)
    
-
+## VS Code Example: Running Scripts and Plotting  
+### Running Scripts
+  Let's create a folder and open a New File there. Name the file `intro.py`. Next, enter the following code into the file:
+  ![example](https://05971e22-a-62cb3a1a-s-sites.googlegroups.com/site/pythonprojectsforecon/butterflycurveexample/Screen%20Shot%202018-07-19%20at%203.26.12%20PM.png?attachauth=ANoY7cqBmmIx-T_nKsnihO7eXmBqCf3LeR69Livs6IaTq1uTjl4uoUt6yCQBv4WYGckiKHycebjLeq7dweKiW0N_dVJgZtTulE-iueE-cb453p1okXuIpLwkeX1vV2aIiEZEp719_DRqRfXV3v8rdZn9OybDlVD3FjGp_klwhGkdPTefbwe39YLpBscRJ7_KubkPuWCc2u8bME1EGfErMOdKqQZ4jPTLYebZWsTMza5wcOQMumlO-O2r96EXHl05wdLmPXlqIl7UN0IX0HL27QreP5hmB8gYbkH6Eit1WkFlZaIXf6W6fu4%3D&attredirects=0)
+  
+  To run this script, right-click in the editer and choose **Run Python File in Terminal** which also saves the file automatically. Alternately, you could select lines you hope to run, then press `Ctrl+Enter` or right-click and choose **Run Selection/Line in Python Terminal**. 
+  
+  If everything works perfectly, an output of "The polynomial has complex roots" should be returned. Indeed, the polynomial f(x) =  1 x^2 + 2 x + 2 has complex roots. 
+  
+### Plotting 
+  Please consult the Jupyter example above for specific steps. 
+  
+  **Note**: If you have previously installed matplotlib or are using an Anaconda distirbution, you will not enter any issues. Otherwise, you may see the message "ModuleNotFoundError: No module named 'matplotlib". To install the package, switch to the Terminal that is already open (the Terminal type should be "Python Debug Console"). Now just enter the commands: 
+  
+  ```
+   pip install matplotlib # Windows 
+   pip3 install matplotlib # MacOS
+   
+   sudo apt-get install python3-tk   # Linux 
+   pip3 install matplotlib  
+  ```
+  You can install any Python package (see [PyPI](https://pypi.org)) using the above codes. 
+  
+  
 
