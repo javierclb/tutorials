@@ -82,7 +82,7 @@ You can fill these by subsetting one after the other; e.g. `benchmarks["child"][
 You should first run `tune!(benchmarks)`. This will, among other things, get a sense
 of how many times to run things to get good results. 
 
-Then, store the results using: 
+Then, get the results using: 
 
 ```julia
 results = run(benchmarks)
