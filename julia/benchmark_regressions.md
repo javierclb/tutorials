@@ -116,7 +116,7 @@ which can be read using `BenchmarkTools.load()`.
 To compare, use the following workflow:
 
 ```julia
-old = BenchmarkTools.load("oldresults.json")
+old = BenchmarkTools.load("oldresults.json")[1]
 new = medians
 judge(old, new)
 ```
