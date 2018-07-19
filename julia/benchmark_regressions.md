@@ -73,7 +73,7 @@ benchmarks["child"] = BenchmarkGroup(["somename", "anothername"])
 ```
 
 The benchmark group located at `benchmarks["child"]` currently has no benchmarks and two names (called tags). To use these
-tags to do filtering, simply use the `@tagged` macro (e.g., `results[@tagged "integer"]`).
+tags to do filtering, simply use the `@tagged` macro (e.g., `benchmarks[@tagged "integer"]`).
  
 You can fill these by subsetting one after the other; e.g. `benchmarks["child"]["childbenchmark"] = ...`.
 
