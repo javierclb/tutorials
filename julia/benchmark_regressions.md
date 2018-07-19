@@ -66,16 +66,16 @@ benchmarks["squaring"] = @benchmarkable foo.(rand(100))
 benchmarks["integer"] = @benchmarkable foo.(rand(100))
 ```
 
-You can also fill with named `BenchmarkGroups()` as children. 
+You can also subset the main group with child `BenchmarkGroups()`. 
 
 ```julia
-benchmarks["child"] = BenchmarkGroup(["sometag", "anothertag"])
+benchmarks["child"] = BenchmarkGroup(["somename", "anothername"])
 ```
 
-Those child groups can be filled in turn, e.g. as `benchmarks["child"] = ...`.
-
-When doing this, note that `BenchmarkGroup`s can have multiple tags. To use these
+The group `"child"` currently has no benchmarks and two names (called tags). To use these
 tags to do filtering, simply use the `@tagged` macro (e.g., `results[@tagged "integer"]`).
+ 
+You can fill these child groups, e.g. by `benchmarks["child"]["childbenchmark"] = ...`.
 
 ### Tuning, Getting, and Simplifying Results 
 
