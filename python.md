@@ -23,7 +23,7 @@ This is recommended. Once you go onto http://www.jupyter.org, choose the second 
 There are several ways to set up your Python environment: 
 1. Installing Jupyter Notebook by using the Anaconda distribution
    
-   This is a great choice to set up your development environment especially if you are **new** to Python. It may not be necessary if you already have a compelte installation of Python and its package managers. Read through https://lectures.quantecon.org/py/getting_started.html to get an idea of the installation procedure as well as how to work with Jupyter Notebooks. You can also follow the steps below for basic setup:
+   This is a great choice to set up your development environment especially if you are *new* to Python. It may not be necessary if you already have a compelte installation of Python and its package managers. Read through https://lectures.quantecon.org/py/getting_started.html to get an idea of the installation procedure as well as how to work with Jupyter Notebooks. You can also follow the steps below for basic setup:
    - Download [conda](https://www.anaconda.com/download/) 
    - Once you have installed Anaconda, you can start the Jupyter Notebook by either (1) launching Jupyter in your applications menu or (2) opening up a terminal and type `jupyter notebook` folllowing the `$` sign. The Jupyter Notebook application will be opened in your default browser automatically. 
    - Now, simply create a new Jupyter Notebook using the *New* dropdown menu and select option *Python 3* or similar to open a new Notebook for Python. Once you enter the Notebook, you can see Help in the menu above for more **Notebook Help** and **User Interface Tour**.
@@ -31,16 +31,24 @@ There are several ways to set up your Python environment:
    
 2. Installing Jupyter Notebook by using the Python’s package manager pip
 
-    Optional. This is an alternative for **experienced** Python users. You could simply just install Jupyter using Python's package manager, [pip]() instead of Anaconda. To do this, first ensure that you have the latest pip by typing `pip3 install --update pip` and then install Jupyter Notebook using `pip3 install jupyter`. 
+    Optional. This is an alternative for *experienced* Python users. You could simply just install Jupyter using Python's package manager, [pip]() instead of Anaconda. To do this, first ensure that you have the latest pip by typing `pip3 install --update pip` and then install Jupyter Notebook using `pip3 install jupyter`. 
     
 3. Setup for Python using [VS Code](https://github.com/econtoolkit/tutorials/blob/master/vscode.md)
-   - Install [VS Code](https://code.visualstudio.com) and the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-   - Install a version of Pyton 3. 
-     1. (MacOS) 
-
+   - Step 1: Install [VS Code](https://code.visualstudio.com) and the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+   - Step 2: Download a supported version of [Python 3](https://www.python.org/downloads/) or similar
+   
+     This built-in Python installation is **NOT** supported for MacOS. 
+     
+     For *MacOS* users, install [Homebrew](https://brew.sh). Simpy paste the code into a Terminal and enter `brew install python3` to install Python 3. 
+     
+     For *Linux* users, the built-in Python installation works. You may open up a terminal and run `sudo apt install python3-pip` to install other Python packages.  
+     
+   - Step 3: For *Windows* users, run `path` at the command prompt to ensure the location of your Python interpreter is included in your PATH environment. If the Python interpreter's folder is not included, open Windows Settings, serch for "environment", select **Edit environment variables for your account**, then edit the Path variable to include that folder. 
+   - Step 4: Select a Python interpreter within VS Code. Start VS Code, open the Command Palette (⇧⌘P), type **Python: Select Interpreter**, then hit enter. If the **Select Python Environment** option is available on the Status Bar, you may use that as well. 
+   
 
 - Give a simple example of how to run that script and see a plot (i.e. matlplotlib from the python interpreter there)
-- 
+
 
 
 # Python Packages 
@@ -83,7 +91,7 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    x = np.linspace(0,3,1000)
    ```
    
-   Now let's use this array of *x* values to generate an array of *y* values *y=sin(x)* Just as before, you can first type `np.sin?` to see the documentation for the sine function in NumPy. Notice that the input is meant to be a NumPy array of values then `np.sin(x)` evaluates sine elementwise - that is, sine applied to every value in the array of x: 
+   Now let's use this array of *x* values to generate an array of *y* values *y=sin(x)*. Just as before, you can first type `np.sin?` to see the documentation for the sine function in NumPy. Notice that the input is meant to be a NumPy array of values then `np.sin(x)` evaluates sine elementwise - that is, sine applied to every value in the array of x: 
    ```
    y = np.sin(x)
    ```
@@ -103,7 +111,7 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    ![Plot](https://05971e22-a-62cb3a1a-s-sites.googlegroups.com/site/pythonprojectsforecon/butterflycurveexample/Screen%20Shot%202018-07-17%20at%2012.25.32%20PM.png?attachauth=ANoY7co8GjNGLRQ9OqoBJ73SI6pEekk-ZOXPFh1a0Q7EMq_KIOFr82XqVnvz-d0MznCeb1T_OdmqlG2nHMvAaLY1Qj3velyZtthQkMiS-GV1l3jC7-EEhvVAnj4fXZ57ptjFYdlRPGXSyNNgYEW8NA8z4ogUO1NC0R767eft0Cug6latjYiWg_kDuQLDDekRbgOvF79ygxwagdziauDxcoSETLYbF2DcaXb1rJBbxxAPwKIeaLy7xRzzS0RLfzLfb0sKSzmmBvIUYAyP4fMEmIbuTJ8E4PFVt80g8zDjvxoAqcKEn8EyxRY%3D&attredirects=0)
    
    ### Summary for Plotting 
-   In fact, the basic procedure for plotting is: 
+   The basic procedure for plotting is: 
    1. Make an array of x values 
    2. Use the array of x values to create an array of y values 
    3. Enter *plt.plot(x,y) 
