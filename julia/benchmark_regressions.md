@@ -44,9 +44,86 @@ judge(ratio(t1, t1_old))
 ```
 
 ## Using and Serializing Benchmark Groups
-TBD
 
-See https://github.com/JuliaCI/BenchmarkTools.jl/blob/master/doc/manual.md#working-with-trial-data-in-a-benchmarkgroup
+The above is a good approach for "quick and dirty" benchmarks, but sometimes you will need
+more persistent or complex suites. That's the idea of this section. 
 
-https://github.com/JuliaCI/BenchmarkTools.jl/blob/master/test/SerializationTests.jl
-I think that the benchmark groups serialize back and forth well with JSON using `load` and `save` as above.
+### Defining a BenchmarkGroup 
+
+First, create an empty `BenchmarkGroup` object: 
+
+```julia
+benchmarks = BenchmarkGroup()
+```
+
+This is a kind of dictionary you can fill with specific benchmarks; e.g. 
+
+```julia 
+foo(x) = x^2 
+
+srand(1234) # Seed the random number generator, so the results are deterministic. 
+benchmarks["squaring"] = @benchmarkable foo.(rand(100))
+benchmarks["integer"] = @benchmarkable foo.(rand(100))
+```
+
+You can also fill with named `BenchmarkGroups()` as children. 
+
+```julia
+benchmarks["child"] = BenchmarkGroup(["sometag", "anothertag"])
+```
+
+Those child groups can be filled in turn, e.g. as `benchmarks["child"] = ...`.
+
+When doing this, note that `BenchmarkGroup`s can have multiple tags. To use these
+tags to do filtering, simply use the `@tagged` macro (e.g., `results[@tagged "integer"]`).
+
+### Tuning, Getting, and Simplifying Results 
+
+You should first run `tune!(benchmarks)`. This will, among other things, get a sense
+of how many times to run things to get good results. 
+
+Then, store the results using: 
+
+```julia
+results = run(benchmarks)
+```
+
+The results will be filled with `Trial` objects, which usually have more data than we need. So
+you can run some sample statistics; e.g. 
+
+```julia
+julia> medians = median(results)
+2-element BenchmarkTools.BenchmarkGroup:
+  tags: []
+  "integer" => TrialEstimate(271.113 ns)
+  "squaring" => TrialEstimate(265.201 ns)
+
+julia> medians["squaring"]
+BenchmarkTools.TrialEstimate: 
+  time:             265.201 ns
+  gctime:           0.000 ns (0.00%)
+  memory:           1.75 KiB
+  allocs:           2
+```
+
+To eliminate all the nesting, use **TBD**. 
+
+### Comparing and Saving Results 
+
+Saving can be done via `BenchmarkTools.save("filename.json", "results")`. This will define a `JSON` file, 
+which can be read using `BenchmarkTools.load()`. 
+
+To compare, use the following workflow:
+
+```julia
+old = BenchmarkTools.load("oldresults.json")
+new = medians
+judge(old, new)
+```
+
+There is also a function `ratio()`, which takes the ratio of objects in 2 different benchmark groups. These can be judged as well, 
+for the same result (i.e., `judge(ratio(old, new)) = judge(old, new)`). 
+
+### Extras 
+
+* If you have a consistent set of parameters, these can be serialized as well; see [the docs](https://github.com/JuliaCI/BenchmarkTools.jl/blob/master/doc/manual.md#caching-parameters).
