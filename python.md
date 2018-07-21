@@ -121,7 +121,7 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    
 ## VS Code Example: Running Scripts and Plotting  
 ### Running Scripts
-  Let's create a folder and open a New File there. Name the file `intro.py`. Next, enter the following code into the file:
+  Let's create a folder and open a New File there. Name the file `intro.py`. Next, enter the following [codes](https://github.com/econtoolkit/tutorials/blob/master/python/discriminant_example.ipynb) into the file:
   ![example](https://05971e22-a-62cb3a1a-s-sites.googlegroups.com/site/pythonprojectsforecon/butterflycurveexample/Screen%20Shot%202018-07-19%20at%203.26.12%20PM.png?attachauth=ANoY7cqBmmIx-T_nKsnihO7eXmBqCf3LeR69Livs6IaTq1uTjl4uoUt6yCQBv4WYGckiKHycebjLeq7dweKiW0N_dVJgZtTulE-iueE-cb453p1okXuIpLwkeX1vV2aIiEZEp719_DRqRfXV3v8rdZn9OybDlVD3FjGp_klwhGkdPTefbwe39YLpBscRJ7_KubkPuWCc2u8bME1EGfErMOdKqQZ4jPTLYebZWsTMza5wcOQMumlO-O2r96EXHl05wdLmPXlqIl7UN0IX0HL27QreP5hmB8gYbkH6Eit1WkFlZaIXf6W6fu4%3D&attredirects=0)
   
   To run this script, right-click in the editer, open the Command Palette (⇧⌘P) and type **Run Python File in Terminal** which also saves the file automatically. Alternately, you could select lines you hope to run, then press `Ctrl+Enter` or right-click , open the Command Palette (⇧⌘P) and type  **Run Selection/Line in Python Terminal**. 
