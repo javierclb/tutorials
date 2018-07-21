@@ -6,7 +6,7 @@
 
 #vscode version
 atreplinit() do REPL
-    @schedule begin
+    @async begin
         sleep(0.1)
         try
             @eval using Revise
