@@ -116,7 +116,7 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
    
    You can check out the [pyplot](https://matplotlib.org/api/pyplot_summary.html) documentation for more options. 
   
-   Let's see an interesting demonstration on how to plot the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_%28transcendental%29)!  
+   Let's see an interesting demonstration on how to plot the [butterfly curve](https://en.wikipedia.org/wiki/Butterfly_curve_%28transcendental%29)!. The following codes can be found [here](https://github.com/econtoolkit/tutorials/blob/master/python/butterfly.ipynb). 
    ![Butterfly curve](https://05971e22-a-62cb3a1a-s-sites.googlegroups.com/site/pythonprojectsforecon/butterflycurveexample/Screen%20Shot%202018-07-17%20at%2012.25.20%20PM.png?attachauth=ANoY7cqLwuPEItbPIpqIaBHbzs0qjae2bCyGAeOCxA6813J4N2IJDBXuYtre7Ya0sDd0Zz85fiZLSY9TR3HTnqqGtgD_M3F8e4nW1lwjcCcW1IEPV4lmuQ09eKBGZnQCoMC3xY8MFC_WIjBonCMhEKps7-lHrxS1TfiFP5wlDo4q98I9Nlt_ewmOmHBCHvyc6jUulWZufPPSHcoa50rumhJLqWMrHNN0eG3hrEnj6uQsBoo27Fa4VK41qx_A1uhvJydswfMyXvaZ2unEURC9pC-4xGHpBb2hUzHsj1zhqq38WZb-UL1_Fx4%3D&attredirects=0)
    
 ## VS Code Example: Running Scripts and Plotting  
@@ -124,7 +124,7 @@ You can check out the [Python Package Index](https://pypi.python.org/pypi) for *
   Let's create a folder and open a New File there. Name the file `intro.py`. Next, enter the following code into the file:
   ![example](https://05971e22-a-62cb3a1a-s-sites.googlegroups.com/site/pythonprojectsforecon/butterflycurveexample/Screen%20Shot%202018-07-19%20at%203.26.12%20PM.png?attachauth=ANoY7cqBmmIx-T_nKsnihO7eXmBqCf3LeR69Livs6IaTq1uTjl4uoUt6yCQBv4WYGckiKHycebjLeq7dweKiW0N_dVJgZtTulE-iueE-cb453p1okXuIpLwkeX1vV2aIiEZEp719_DRqRfXV3v8rdZn9OybDlVD3FjGp_klwhGkdPTefbwe39YLpBscRJ7_KubkPuWCc2u8bME1EGfErMOdKqQZ4jPTLYebZWsTMza5wcOQMumlO-O2r96EXHl05wdLmPXlqIl7UN0IX0HL27QreP5hmB8gYbkH6Eit1WkFlZaIXf6W6fu4%3D&attredirects=0)
   
-  To run this script, right-click in the editer and choose **Run Python File in Terminal** which also saves the file automatically. Alternately, you could select lines you hope to run, then press `Ctrl+Enter` or right-click and choose **Run Selection/Line in Python Terminal**. 
+  To run this script, right-click in the editer, open the Command Palette (⇧⌘P) and type **Run Python File in Terminal** which also saves the file automatically. Alternately, you could select lines you hope to run, then press `Ctrl+Enter` or right-click , open the Command Palette (⇧⌘P) and type  **Run Selection/Line in Python Terminal**. 
   
   If everything works perfectly, an output of "The polynomial has complex roots" should be returned. Indeed, the polynomial f(x) =  1 x^2 + 2 x + 2 has complex roots. 
   
