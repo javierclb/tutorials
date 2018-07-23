@@ -9,6 +9,9 @@ Pkg.add("GR")
 Pkg.add("Plotly")
 Pkg.add("QuantEcon")
 Pkg.add("IJulia")
+Pkg.add("Expectations")
+Pkg.add("NLsolve")
+Pkg.add("Parameters")
 
 warn("The package updates and precompilation will be slow!")
 Pkg.update()
@@ -22,6 +25,9 @@ using GR
 using Plotly
 using QuantEcon
 using IJulia
+using Expectations
+using NLsolve
+using Parameters 
 
 warn("For setting up editors the Julia Binary location is at")
 JULIA_HOME
