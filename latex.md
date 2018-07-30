@@ -4,7 +4,6 @@
     - [VS Code Latex](vscode.md#setup-for-latex) is great
     - [TeX Studio](http://texstudio.sourceforge.net/) is getting left behind
 3. *Optional:* Consider a bibtex management tool
-    -  [Zotero](https://www.zotero.org/) is a big tool with bibtex support.
-    -  After installing you need Better BibTex.  Install with [Zotero Better BibTeX Installation](https://retorque.re/zotero-better-bibtex/installation/)
-    -  After the installation, consider opening `Zotero Preferences/Better BibTeX` and choosing a better citation key format.  One is `[authors3][year]`
-    - An alternative to `Zotero` is [Jabref](http://www.jabref.org/), although it is getting buggier and more confusing over time.  You can change the "BibTex key generator" pattern to `[authors3][year]`
+    - [Jabref](http://www.jabref.org/), although it is getting buggier and more confusing over time.  You can change the "BibTex key generator" pattern to `[authors3][year]`
+    - The key with JabRef is to keep a master `.bib` file for the bibliography, and use the `Tools/New sublibrary based on AUX file` to generate a `.bib` file from the master references for the individual paper.
+    - On High Def displays on windows, the current version (v4.x) does not work very well.  See https://help.jabref.org/en/FAQwindows for how to change the display settings.  When v5.0 is released, the problem appears to be fixed
