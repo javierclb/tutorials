@@ -7,7 +7,7 @@
 # Version 0.7 Setup notes
 After installation from https://julialang.org/downloads/, open a REPL and type 
 ```
-] add DifferentialEquations Interpolations Optim IJulia Atom Expectations Revise Distributions QuantEcon Parameters Juno; precompile
+] add DifferentialEquations Interpolations Optim IJulia Atom Expectations Revise Distributions Parameters Juno; precompile
 ```
 This will take a while (e.g. 30-45 minutes?) to build and precompile, so get some coffee
 
@@ -15,7 +15,7 @@ After that, install Atom and then go to Settings (Ctrl ,, or Cmd , on OS X) and 
 - Go to the package and set the executable to the rc2 (e.g. `C:\Users\jlperla\AppData\Local\Julia-0.7.0\bin\julia.exe`)
 - You may need to manually add `] add Juno` into your v0.7 setup at this point if you didn't before.
 
-Later, the following are hopefully working
+Later, the following are hopefully working at a later date
 ```
-add  Plots ; precompile
+add  Plots QuantEcon ; precompile
 ```
