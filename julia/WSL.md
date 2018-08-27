@@ -10,6 +10,7 @@ See https://docs.microsoft.com/en-us/windows/wsl/install-win10  but basically
 - To install some important things
 ```bash
 sudo apt install make
+sudo apt-get install libxt6 libxrender1 libgl1-mesa-glx libqt5widgets5
 ```
 
 ## Installing Python and Conda
