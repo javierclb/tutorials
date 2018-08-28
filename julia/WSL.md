@@ -1,4 +1,5 @@
 # Running Julia and QuantEcon with the Windows Services for Linux
+**TODO**  Create a BASH script for all?
 ## Installing WSL with Ubuntu
 See https://docs.microsoft.com/en-us/windows/wsl/install-win10  but basically
 - Run PowerShell as an administrator (i.e. right-click on the icon and choose `Run as Administrator`
@@ -13,15 +14,18 @@ sudo apt install make
 sudo apt-get install libxt6 libxrender1 libgl1-mesa-glx libqt5widgets5
 ```
 
-## Installing Python and Conda
-Install [Conda](https://docs.anaconda.com/anaconda/install/linux)
-- Download the installation script from https://www.anaconda.com/download/#linux 
-- Run this with `bash Anaconda3-5.2.0-Linux-x86_64.sh`
-- Make sure you have the path added to your `.bashrc`
-- Add in the 
+## Installing Julia and Python
+Install [Anaconda](https://www.anaconda.com/download/#linux) 
+- Download the installation script and then run it.  With the current version
 ```bash
-pip install sphinxcontrib-bibtex
+wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+bash Anaconda3-5.2.0-Linux-x86_64.sh
 ```
+- Do not install `vscode`
+- When it asks, make sure you add the binary file to your path by editing your `.bashrc`
+- Add in the additional python dependencies
+
+Install Julia
 
 ## Installing Julia
 Run the following commands in the directory you want to install within
@@ -29,4 +33,28 @@ Run the following commands in the directory you want to install within
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.0-linux-x86_64.tar.gz
 tar -xzvf julia-1.0.0-linux-x86_64.tar.gz
 ```
-Then make sure it is on your path.  ie. edit `.bashrc` **TODO**
+
+## Install Python Dependencies
+Assuming you installed anaconda in your home directory (for `USERNAME`) then,
+
+```bash
+export PATH=/home/USERNAME/anaconda3/bin:$PATH
+pip install sphinxcontrib-bibtex
+```
+
+## Edit the path and bash
+To edit your `.bashrc`
+- Within your home directory, `edit .bashrc`
+- This opens Vim.  Go to the bottom of the file, and type `i` to enter insert mode.
+- Add something like the following:
+```bash
+export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME:julia-1.0.0/bin:$PATH
+```
+- Hit `<Esc>` to exit insert mode, and then type `:x` to save and exit.
+- If you are often loading files in your Windows system, it can be useful to add a symlink.  To do this from your home directory, with your Windows username as `WINDOWSUSERNAME`, do something like the following
+```bash
+ln -s /mnt/c/Users/WINDOWSUSERNAME/Documents/ Documents
+```
+
+```
+
