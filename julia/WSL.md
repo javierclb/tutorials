@@ -56,5 +56,14 @@ export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME:julia-1.0.0/bin:$PATH
 ln -s /mnt/c/Users/WINDOWSUSERNAME/Documents/ Documents
 ```
 
+## To Run IJulia
+- Run `julia` and then type
+```julia
+] add IJulia Plots; precompile
 ```
-
+- Then in the console type
+```bash
+jupyter lab
+```
+- To access it from your browser (on Windows), look at the Jupyter output to find a link such as 
+`http://localhost:8888/?token=BIGTOKEN`.  Copy this into your browser.
