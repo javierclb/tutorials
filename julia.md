@@ -91,7 +91,7 @@ Note: This guide is a minimal example to get up-and-running with Julia 1.0 and [
 
 1. Install Atom, by downloading it from the [Atom website](https://atom.io).
 
-2. Go to the `Install` menu, either by clicking the appropriate button on the welcome screen, or navigating to it after opening the settings pane (`Cntrl + ,` on Windows, and `⌘ + ,` on macOS).
+2. Go to the `Install` menu, either by clicking the appropriate button on the welcome screen, or navigating to it after opening the settings pane (`Cntrl,` on Windows, and `⌘,` on macOS).
 
 3. Type `uber-juno` into the search box and hit enter. Click install on the package that appears. This will typically take a while, as Juno installs dependencies. When it asks you whether or not to use the standard layout, click `yes`.
 
@@ -101,8 +101,7 @@ Note: This guide is a minimal example to get up-and-running with Julia 1.0 and [
     
     So I would type in `/Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia` (no quotes).
 
-
-5. You can test this setup by restarting Atom, opening the command palette (`Shift + Cntrl + P` on Windows, and `Shift + ⌘ + P` on a Mac, and selecting `Julia: Standard Layout`. :warning: Sometimes, you may encounter an error mesage, say because Atom was confused by the switch in versions. Restarting the program should resolve this. 
+5. You can test this setup by restarting Atom, opening the command palette (`Shift-Cntrl-P` on Windows, and `Shift-⌘-P` on a Mac, and selecting `Julia: Standard Layout`. :warning: Sometimes, you may encounter an error mesage, say because Atom was confused by the switch in versions. Restarting the program should resolve this. 
 
 ### Usage
 
