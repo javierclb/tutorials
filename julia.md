@@ -77,24 +77,55 @@ Pkg.checkout("Revise", "v0.6")
 Another package is 
 REPL, but it doesn't work well with VS Code.  It can always be manually added in a particular REPL session with `using OhMyREPL`.
 
-## Atom with Juno
-**NOTE:** At this point, [VS Code](vscode.md) is a much higher performance editor, even if it has fewer Julia specific features.
+## Julia 1.0 with Atom + Juno
 
-A text editor for `.jl` files that has a built-in REPL to run code, etc.  It is the closest to a matlab style IDE, but the debugger is still in progress.  Juno is built on [Atom](https://atom.io/) and has a reputation for being a little slow as an editor, although it is making progress.
+Note: This guide is a minimal example to get up-and-running with Julia 1.0 and [Atom](https://atom.io), extended with [Juno](http://junolab.org). For a more comprehensive overview of the Atom IDE, see the [Atom Tutorial](atom.md). 
 
-- In Install [Atom](https://atom.io/)
-- o to Settings (`ctrl-,`, or `cmd-,` on OS X) and go to the "Install" panel.
-- Type `uber-juno` into the search box and hit enter. Click the install button on the package of the same name.
-- You then typically need to point Juno at the julia executable.  To do this, go to the settings page with `ctrl-,` and go to the `julia-client` package
-- Make sure you know the locaion of the Julia executable.  You can find this in the REPL with the function `JULIA_HOME`.e.g. `/bin/Julia-0.6.2/bin/julia.exe`  On windows, better to avoid backslashes
-- There you will see a place to put the Julia executable. Put the full file to it,
-- After, you can test out a Julia consol by choosing `shift-ctrl-p` (or `shift-cmd-p` on OS X) and then typing `Julia` to see all of the options.
-- For more on atom, see [Atom Tutorial](atom.md)
+### Choosing Atom + Juno 
 
-For some notes,
-  - See [Installation](http://docs.junolab.org/latest/man/installation.html)
-  - See [Usage Guide](http://docs.junolab.org/latest/man/basic_usage.html)
-  - After installation, start Juno and create a new `.jl` file, or open the `example.jl` in this repository
+* **Why these technologies?** Currently, the Juno environment is the richest IDE for Julia, with native support for things like plots, documentation, progress statistics, autocompletion, and namespaces. Juno is built on Atom, an open-soure and "hackable" (read: extendable, modular, etc.) text-editor. 
+
+* **What are the drawbacks?** The main one is performance; Atom is a bit slower than VS Code. But this isn't too noticeble, and we think the extra features + interoperability with the rest of the Julia community is worth it. 
+
+### Installation and Setup
+
+1. Install Atom, by downloading it from the [Atom website](https://atom.io).
+
+2. Go to the `Install` menu, either by clicking the appropriate button on the welcome screen, or navigating to it after opening the settings pane (`Cntrl + ,` on Windows, and `⌘ + ,` on macOS).
+
+3. Type `uber-juno` into the search box and hit enter. Click install on the package that appears. This will typically take a while, as Juno installs dependencies. When it asks you whether or not to use the standard layout, click `yes`.
+
+4. Sometimes, Juno will fail to find the Julia executable (say, if it's installed somewhere nonstandard, or you have multiple). To do this, go back to preferences, click on `Packages`, type in `julia-client`. You'll then see a setting called `Julia path`. Fill it with the result of running `Sys.BINDIR` in the REPL, with an addiional `/julia` at the end. For example, in my REPL running that command yields:
+
+    `/Applications/Julia-1.0.app/Contents/Resources/julia/bin`
+    
+    So I would type in `/Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia` (no quotes).
+
+
+5. You can test this setup by restarting Atom, opening the command palette (`Shift + Cntrl + P` on Windows, and `Shift + ⌘ + P` on a Mac, and selecting `Julia: Standard Layout`. :warning: Sometimes, you may encounter an error mesage, say because Atom was confused by the switch in versions. Restarting the program should resolve this. 
+
+### Usage
+
+* Define a variable in the REPL and navigate to the workspace tab (near documentation), and that variable (along with a MATLAB-style binding, `ans`) should appear. 
+
+* Make a plot using 
+
+```
+    using Plots 
+    x = 0.0:0.01:10.0 
+    y = sin.(x)
+    plot(x, y)
+```
+
+If you don't have `Plots.jl` installed, see our earlier configuration instructions. (You will quickly feel one of the major current issues with Julia environment right now: (time required to plot the first time, which they are working on).
+
+* Create a new `.jl` file, or open the `example.jl` in this repository
   - To run a line of code in the editor, use `shift-enter`
-  - To run the entire file, you can use the tools on the left hand bar, or `shift-control-enter`
-  - You will quickly feel one of the major current issues with Julia environment right now: (time required to plot the first time, which they are working on).
+  - To run the entire file, you can use the tools on the left hand bar, or `shift-control-enter` (with the usual proviso for Mac users).
+
+* Use the `Documentation` pane to search up Julia objects (say, the function `getindex`).
+
+### Additional Notes 
+
+* [Juno Installation](http://docs.junolab.org/latest/man/installation.html)
+* [Juno Usage Guide](http://docs.junolab.org/latest/man/basic_usage.html)
