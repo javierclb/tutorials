@@ -103,6 +103,13 @@ Note: This guide is a minimal example to get up-and-running with Julia 1.0 and [
 
 5. You can test this setup by restarting Atom, opening the command palette (`Shift-Cntrl-P` on Windows, and `Shift-⌘-P` on a Mac, and selecting `Julia: Standard Layout`. :warning: Sometimes, you may encounter an error mesage, say because Atom was confused by the switch in versions. Restarting the program should resolve this. 
 
+### Installing Key Packages
+After installation open a REPL and type 
+```
+] add DifferentialEquations Interpolations Optim IJulia Atom Expectations Revise Distributions Parameters Juno Plots GR QuantEcon; precompile
+```
+This may take a long time (e.g. 30 minutes?)
+
 ### Usage
 
 * Define a variable in the REPL and navigate to the workspace tab (near documentation), and that variable (along with a MATLAB-style binding, `ans`) should appear. 
