@@ -2,10 +2,10 @@
 ## Choosing Julia
 
 - **Why Julia?**: Julia gets as close to writing whiteboard mathematics directly in code as any language has yet to achieved.  Moreover, the code has the possibility to be almost as as fast (or faster in the longrun) than typical code using compiled lanugages like Fortran or C/C++.
-- **Why not Python?**: Python is a general-purpose language, and very useful for things like screen-scraping, manipulating data files, gluing together code, cookbook datascience, etc.  But it is not ideal for implementing mathematical models and scientific computing, and incapable of high-performance by its very design.  The development environment is much more mature than Julia, but in 2+ years that will likely not be true.  On the other hand, Python may remain a better language for cookie-cutter datascience and machine learning tasks in the near future.
-- **Is Julia Ready?** The language: Yes.  The environment: Almost.  The general "development environment" of Julia is rough around the edges, but will get better.  If you are thinking a few years into the future, then now is the time to invest in learning the language (even if it is sometimes painful).  The current version of Julia (0.6) is the last prior to a stabilization of the language.  But for the most part, learning Julia 0.6 is not time wasted (even if some code will require conversion when 0.7/1.0 is released).
-- **Will it succeed?** It is too good to fail!  The community is large enough, and the packages available are dense enough, to support users until it is fully ready.
-- **It feels slow!**:  Yes, the environment does.  Many tasks run slowly the first time you execute them.  Keep in mind that Julia is often closer to a compiled language (like Fortran and C++) than a dynamic language (like Matlab or Python).  But there is hope!  The perceived speed usually has to do with either (1) the package management system; or (2) code needs to be compiled the first time you use it.  The package management is being replaced, which should help, and the timing of when compilation happens should get better.  Until then: luckily, once the compiling has happened it should feel lightning fast.
+- **Why not Python?**: Python is a general-purpose language, and very useful for things like screen-scraping, manipulating data files, gluing together code, cookbook datascience, etc.  But it is not ideal for implementing mathematical models and scientific computing, and incapable of high-performance by its very design.  The development environment is more mature than Julia, but in 2+ years that will likely not be true.  On the other hand, Python may remain a better language for cookie-cutter datascience and machine learning tasks in the near future.
+- **Is Julia Ready?** The language: Yes.  The environment: Almost.  The general "development environment" of Julia is rough around the edges, but will get better.  If you are thinking a few years into the future, then now is the time to invest in learning the language (even if it is sometimes painful).  The current version of Julia (1.0) is now stable and with [backwards compatible release cycles](https://semver.org/), so while the ecosystem and environment will evolve, the code will now work.
+- **Will it succeed?** It is too good to fail!  The community is large enough, and the packages available are dense enough, to support specialist users in certain fields already.  Whether it displaces Matlab in the medium-run is a tougher quetsion, but it isn't necessary.
+- **It feels slow!**:  Yes, the environment does.  Many tasks run slowly the first time you execute them.  Keep in mind that Julia is often closer to a compiled language (like Fortran and C++) than a dynamic language (like Matlab or Python).  But there is hope!  The perceived speed usually has to do with code being compiled the first time you use it.  Luckily, once the compiling has happened it should feel lightning fast.  Plotting is another area where (first-plot) performance is often slow, but that should become better in the next few years.
 
 # Getting Started with Julia
 
@@ -61,22 +61,6 @@ To install Julia separately you can follow [First Steps](https://lectures.quante
         - After that, type `jupyter notebook` to launch Jupyter
         - If you don't want to enter the command `cd/folder_name` each time, you could set up a bash alias command. See this [tutorial](https://davidwalsh.name/alias-bash).
 
-
-
-## Advanced Configuration for your Desktop: The Revise Workflow
-It is much easier to edit sourcecode in an editor with [Revise.jl](https://github.com/timholy/Revise.jl).
-1. First install with `Pkg.add("Revise")`
-2. Find the `.` files are for your account.  For example, it is usually at `cd ~` on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`
-3. Copy [.juliarc.jl](etc/.juliarc.jl) to that directory
-4. *Optional, with Atom (but not VS Code):* for Juno/Atom, you need to use the master of Revise.  To do this,
-```
-Pkg.add("Revise")
-Pkg.checkout("Revise", "v0.6")
-```
-
-Another package is 
-REPL, but it doesn't work well with VS Code.  It can always be manually added in a particular REPL session with `using OhMyREPL`.
-
 ## Julia 1.0 with Atom + Juno
 
 Note: This guide is a minimal example to get up-and-running with Julia 1.0 and [Atom](https://atom.io), extended with [Juno](http://junolab.org). For a more comprehensive overview of the Atom IDE, see the [Atom Tutorial](atom.md). 
@@ -102,6 +86,12 @@ Note: This guide is a minimal example to get up-and-running with Julia 1.0 and [
     So I would type in `/Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia` (no quotes).
 
 5. You can test this setup by restarting Atom, opening the command palette (`Shift-Cntrl-P` on Windows, and `Shift-⌘-P` on a Mac, and selecting `Julia: Standard Layout`. :warning: Sometimes, you may encounter an error mesage, say because Atom was confused by the switch in versions. Restarting the program should resolve this. 
+
+## Advanced Configuration for your Desktop: The Revise Workflow
+It is much easier to edit sourcecode in an editor with [Revise.jl](https://github.com/timholy/Revise.jl).
+2. Find the `.` files are for your account.  For example, it is usually at `cd ~/.julia` on linux/osx/windows with bash, or in a directory such as `C:\Users\USERNAME\.julia`
+3. Copy [setup.jl](etc/setup.jl) to that directory
+
 
 ### Installing Key Packages
 After installation open a REPL and type 
