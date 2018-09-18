@@ -88,9 +88,10 @@ Note: This guide is a minimal example to get up-and-running with Julia 1.0 and [
 5. You can test this setup by restarting Atom, opening the command palette (`Shift-Cntrl-P` on Windows, and `Shift-⌘-P` on a Mac, and selecting `Julia: Standard Layout`. :warning: Sometimes, you may encounter an error mesage, say because Atom was confused by the switch in versions. Restarting the program should resolve this. 
 
 ## Advanced Configuration for your Desktop: The Revise Workflow
-It is much easier to edit sourcecode in an editor with [Revise.jl](https://github.com/timholy/Revise.jl).
-2. Find the `.` files are for your account.  For example, it is usually at `cd ~/.julia` on linux/osx/windows with bash, or in a directory such as `C:\Users\USERNAME\.julia`
-3. Copy [setup.jl](etc/setup.jl) to that directory
+It is much easier to edit sourcecode in an editor with [Revise.jl](https://github.com/timholy/Revise.jl).  See [configuration](https://timholy.github.io/Revise.jl/latest/config.html#Using-Revise-by-default-1) instructions for details, or
+1. Find the `.` files are for your account.  For example, it is usually at `cd ~/.julia/` on linux/osx/windows with bash, or in a directory such as `C:\Users\USERNAME\.julia\`
+2. Create a directory called `config` as required, so that `.julia/config/` exists
+2. Copy [startup.jl](etc/startup.jl) to that directory, so that you have `.julia/config/startup.jl`
 
 
 ### Installing Key Packages
