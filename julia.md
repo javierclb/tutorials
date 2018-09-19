@@ -87,6 +87,17 @@ Note: This guide is a minimal example to get up-and-running with Julia 1.0 and [
 
 5. You can test this setup by restarting Atom, opening the command palette (`Shift-Cntrl-P` on Windows, and `Shift-⌘-P` on a Mac, and selecting `Julia: Standard Layout`. :warning: Sometimes, you may encounter an error mesage, say because Atom was confused by the switch in versions. Restarting the program should resolve this. 
 
+6. To change a few Atom settings, with `Shift-Ctrl-P` go to ` Atom > Open Your Config` to get your `config.cson` add,
+- `softWrap: true` in the `editor:` section
+- And
+```
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+```    
+If you do not want to mess with the `config.cson` directly, you can go `Ctrl-,` to get the settings and then go 
+- `Packages` and choose `line-ending-selector` and change the setting to `LF`.
+- `Editor` and change the soft wrap.
+
 ## Advanced Configuration for your Desktop: The Revise Workflow
 It is much easier to edit sourcecode in an editor with [Revise.jl](https://github.com/timholy/Revise.jl).  See [configuration](https://timholy.github.io/Revise.jl/latest/config.html#Using-Revise-by-default-1) instructions for details, or
 1. Find the `.` files are for your account.  For example, it is usually at `cd ~/.julia/` on linux/osx/windows with bash, or in a directory such as `C:\Users\USERNAME\.julia\`
