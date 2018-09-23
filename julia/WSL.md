@@ -48,7 +48,7 @@ To edit your `.bashrc`
 - This opens Vim.  Go to the bottom of the file, and type `i` to enter insert mode.
 - Add something like the following:
 ```bash
-export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME:julia-1.0.0/bin:$PATH
+export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME/julia-1.0.0/bin:$PATH
 ```
 - Hit `<Esc>` to exit insert mode, and then type `:x` to save and exit.
 - If you are often loading files in your Windows system, it can be useful to add a symlink.  To do this from your home directory, with your Windows username as `WINDOWSUSERNAME`, do something like the following
