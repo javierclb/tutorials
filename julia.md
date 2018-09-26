@@ -31,6 +31,11 @@ To install Julia separately you can follow [First Steps](https://lectures.quante
 
 1. [Git](https://git-scm.com/downloads). 
 	- This is the "version control system" that Julia uses to manage packages, and that coders use to manage software. 
+	- If on Windows, afterwards we recommend running
+```
+git config --global core.eol lf
+git config --global core.autocrlf false
+```
 2. [Anaconda](https://www.anaconda.com/download/)
     - May not be necessary if you already have a complete installation of Python and its package managers
     - Choose the Anaconda with Python 3.6
