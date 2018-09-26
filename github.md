@@ -13,3 +13,9 @@ While you can download files separately from GitHub repositories, you are better
     - Instead, you can see if there are changes on the server by opening up your git client (e.g. GitHub Desktop)
     - Select the appropriate repository, and it should `Fetch origin` and tell you if there are any changes.  If you want to update them, you can choose the `Pull` from the server.
 - To track changes in a repository, you can also choose to `Watch` it at the top of any repository webpage
+
+After the installation of `Git`, if using Windows we recommend opening a console and running
+```
+git config --global core.eol lf
+git config --global core.autocrlf false
+```
