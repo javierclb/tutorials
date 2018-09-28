@@ -86,7 +86,7 @@ With these, some of the useful features and key-bindings are
 
 
 ## Editing Julia Files
-See [Julia](https://github.com/econtoolkit/julia).  Another useful package is [language-weave](https://atom.io/packages/language-weave) package
+See [Julia][julia.md]  Another useful package is [language-weave](https://atom.io/packages/language-weave).
 
 ## Editing LaTeX
 **Note:** Editing latex in Atom is possible, but slower and buggier than you would hope.
