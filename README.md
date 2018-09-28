@@ -1,13 +1,10 @@
 # Tutorials and Setup Guides
 
-## Infrastructure
 - [GitHub](github.md) 
 - [Markdown](markdown.md) 
 - [LaTeX](latex.md) 
 - [Atom](atom.md) 
 - [VS Code](vscode.md) -- Another text editor. Slightly faster than Atom, but does not support Julia. 
-
-## Languages 
 
 - [Julia](julia.md) and [Julia Notes](/julia/README.md)
     -  [Julia Performance](julia/performance_bechmarking.md)
