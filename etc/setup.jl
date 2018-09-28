@@ -3,7 +3,7 @@
 # Adding important libraries.
 @warn "Installing important libraries.  Be extremely patient"
 using Pkg 
-pkg"add Revise Plots QuantEcon Parameters Expectations IJulia GR NLsolve Interpolations"
+pkg"add Revise Plots QuantEcon Parameters Expectations IJulia GR NLsolve Interpolations Optim DifferentialEquations"
 
 # Updating libraries. 
 @warn "The package updates and precompilation will be slow!"
