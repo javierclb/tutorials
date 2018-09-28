@@ -52,7 +52,7 @@ This will overwrite everything, but will not modify your local files.
 ## Troubleshooting
 See http://intro.syzygy.ca/troubleshooting/
 
-## The Julia package manager is mishehaving.  How do I delete all of my local julia packages?
+## The Julia package manager is misbehaving.  How do I delete all of my local julia packages?
 In a terminal, recursively delete the `~/.julia` directory with
 ```bash
 rm -r .julia
