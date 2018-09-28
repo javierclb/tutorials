@@ -4,7 +4,13 @@ The current syzygy setup can only be used by UBC Economics department students, 
 
 These notes supplment those at: http://intro.syzygy.ca/troubleshooting/ which mostly apply to the VSE setup.
 
+## Jupyter Lab Features
+Some of the key jupyterlab features to consider are:
+- Get unicode for symbols with latex commands and `<TAB>`.  Try to type `\alpha<TAB>` to get 
+  - Note: the first time you do it, the unicode completion will be very slow.
+
 ## Terminal
+
 ### How do I open a terminal?
 Syzygy provides a linux terminal to your account, with a large set of linux tools.  To open a terminal:
 1. If you do not have a "Launcher" tab, then choose `/File/New Launcher` or else `<Ctrl-Shift-L>`
@@ -43,4 +49,17 @@ git fetch origin; git reset --hard HEAD; git pull
 ```
 This will overwrite everything, but will not modify your local files.
 
+## Troubleshooting
+See http://intro.syzygy.ca/troubleshooting/
 
+## The Julia package manager is mishehaving.  How do I delete all of my local julia packages?
+In a terminal, recursively delete the `~/.julia` directory with
+```bash
+rm -r .julia
+```
+
+## How do I restart my server?
+1. In the Jupyterlab  `Commands`tab, type to get `Launch Classic Notebook`.
+2. Choose `Control Panel` at the top
+3. Choose "Stop My Server" 
+4. Close all browser tabs, and login to https://vse.syzygy.ca/ again
