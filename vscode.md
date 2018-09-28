@@ -3,12 +3,11 @@
 - [VS Code](#vs-code)
     - [Extensions, User Settings, and the Command Pallete](#extensions-user-settings-and-the-command-pallete)
     - [General Setup](#general-setup)
-    - [Setup for Julia](#setup-for-julia)
     - [Github Integration](#github-integration)
     - [Setup for Latex](#setup-for-latex)
     - [Other Links and Material](#other-links-and-material)
 
-Another cross-platform, general purpose editor with Julia support is [VS Code](https://github.com/Microsoft/vscode)
+:warning: As of September 2018, VS Code doesn't support Julia 1.0. 
 
 ## Extensions, User Settings, and the Command Pallete
 **Command Palette:** 
@@ -28,44 +27,6 @@ Many features in VS Code are found through the Command Palette which can be acce
 3. *Optional:* It is convenient to globally change the word wrap, so choose `Ctrl+,` and then set `"editor.wordWrap": "on"`
 4. *Optional:* It is convenient to make VSCode reload files automatically when loaded externally. To do this, so choose `Ctrl+,` and then set `"files.useExperimentalFileWatcher": true`
 5. *Optional*: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
-
-## Setup for Julia
-1. Ensure that [VS Code](https://github.com/Microsoft/vscode) and [Julia](julia.md) are installed
-2. Type in `julia` to find and install `Julia Language Support`
-    - Alternatively, you can click `Install` from [VS Code Julia](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
-3. To test the installation:
-    - Create a new File called `test.jl` or something similar, and copy in something like
-    ```julia
-    f(x) = x
-    f(2)
-    ```
-   - In the file, go `F5` to run the file.  The first time you do this, it is likely that this will take time so be a little patient.  On the bottom, it may say something like "Language Server Busy"
-   - If it shows something in the bottom "TERMINAL" like the following, then it is working
-    ```julia
-    Main> f(x) = x
-    f (generic function with 1 method)
-    Main> f(2)
-    2
-    ```
-4. *Optional*: If the above doesn't work, then you may need to manually set your Julia executable.
-    - First, find the location of the julia binary.  The easiest way to do this is to open a separate Julia REPL and type `JULIA_HOME` to get something like `C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin`
-    - From this location, the file is something like `C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe` on Windows or something equivalent on other OSs.  For Windows, make sure to double every backlash
-    - To set this in VS Code, open up the user settings by opening up the command palette `> Preferences: User Settings`
-    - In here, type `julia` to get the julia specific settings
-    - Then click on the "julia.executablePath" in the "Default User Settings" and choose "Edit" to "Copy to Settings"
-    - This copies it over, and you can put in the path.  For example, `"julia.executablePath": "C:\\Users\\jlperla\\AppData\\Local\\Julia-0.6.3\\bin\\julia.exe"` where the quotes are important.
-5. Play around with executing Julia code
-    - You can execute a single line with `Ctrl+Enter`, which is a great way to go line by line through the code
-    - Execute the whole file with `F5`
-    - To see the plotting pane, ensure you have `Plots.jl` installed (i.e. `Pkg.add("Plots")`) and then copy the following into a test file
-    ```julia
-    using Plots
-    plot(1:5, 1:5)
-    ```
-    - Execute the code (noting that `using Plots` the first plot will take 20-30 seconds after precompilation) and it should show the Plot Pane
-6. *Optional, but strongly encouraged:* Setup the `Revise.jl` workflow described in [Julia Notes](julia.md#advanced-configuration-for-your-desktop-the-revise-workflow).  To summarize,
-    - Find the `.` files are for your account. For example, it is usually at cd ~ on linux/osx/windows with bash, or in a directory such as `C:\Users\jlperla`
-    - Copy [.juliarc.jl](etc/.juliarc.jl) to that directory or add the contents of that file if required.
 
 ## Github Integration
 - If you are working on a cloned repository, you can see changes in the `Source Control` tab, or with `Ctrl+Shift+G`.
