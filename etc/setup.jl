@@ -1,33 +1,17 @@
 #Run this file a new installation.  Hopefully all unnecessary with Pkg3
 
-#Adding important libraries
+# Adding important libraries.
 warn("Installing important libraries.  Be extremely patient")
-Pkg.add("Revise")
-Pkg.add("OhMyREPL")
-Pkg.add("Plots")
-Pkg.add("GR")
-Pkg.add("Plotly")
-Pkg.add("QuantEcon")
-Pkg.add("IJulia")
-Pkg.add("Expectations")
-Pkg.add("NLsolve")
-Pkg.add("Parameters")
+using Pkg 
+pkg"add Revise Plots QuantEcon Parameters Expectations IJulia GR NLsolve Interpolations"
 
+# Updating libraries. 
 warn("The package updates and precompilation will be slow!")
-Pkg.update()
+pkg"up"
 
 #Precompiling installed libraries
-warn("Precompiling libraries.  Be even more patient")
-using Revise
-using OhMyREPL
-using Plots
-using GR
-using Plotly
-using QuantEcon
-using IJulia
-using Expectations
-using NLsolve
-using Parameters 
+warn("Precompiling libraries. Be even more patient")
+pkg"precompile"
 
 warn("For setting up editors the Julia Binary location is at")
-JULIA_HOME
+Sys.BINDIR
