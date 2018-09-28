@@ -1,8 +1,8 @@
 # Syzygy Tutorial
 
-The current syzygy setup can only be used by UBC Economics department students, faculty, and employees.  Future versions of other syzggy setups, such as http://ubc.syzygy.ca  may support Julia, but do not currently.
+The current syzygy setup can only be used by UBC Economics department students, faculty, and employees.  To login, use your CWL on https://vse.syzygy.ca/ 
 
-To login, use your CWL on https://vse.syzygy.ca/ 
+These notes supplment those at: http://intro.syzygy.ca/troubleshooting/ which mostly apply to the VSE setup.
 
 ## Terminal
 ### How do I open a terminal?
@@ -42,3 +42,5 @@ But keep in mind that git will never overwrite local changes to files unless you
 git fetch origin; git reset --hard HEAD; git pull
 ```
 This will overwrite everything, but will not modify your local files.
+
+
