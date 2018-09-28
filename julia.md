@@ -26,7 +26,7 @@ For more details on accessing tutorials, see [Julia Tutorials](julia/tutorials.m
 
 ## Installing Julia on your Desktop
 
-To install Julia locally [First Steps](https://lectures.quantecon.org/jl/getting_started.html#first-steps).  Alternatively, for the impatient the summary of links to download and install is:
+To install Julia locally, see the QuantEcon [first steps](https://lectures.quantecon.org/jl/getting_started.html#first-steps).  Alternatively, for the impatient the summary of links to download and install is:
 
 1. [Git](https://git-scm.com/downloads). 
 	- This is the "version control system" that Julia uses to manage packages, and that coders use to manage software. 
@@ -39,21 +39,13 @@ git config --global core.autocrlf false
     - May not be necessary if you already have a complete installation of Python and its package managers
     - Choose the Anaconda with Python 3.6
 3. Install [Julia](https://julialang.org/downloads/)
-4. *Optional, but Recommended*: [VS Code](https://github.com/Microsoft/vscode) as an editor, with installation/setup notes in [VS Code Notes](vscode.md)
-5. *Optional, but Recommended* Consider running the following setup to download and precompile some useful packages
-    - Either download [setup.jl](etc/setup.jl) or clone this repository
-    - Start up a Julia console, use `;` to get a shell and `cd` into the location of that file
-    - Then execute the following, and go to lunch
-    ```julia
-    include("setup.jl")
-    ```
-    - You might get build errors on the `Pkg.update()` setup with the IJulia installation.  If so, rerun the setup script, and it may ask you to run `Pkg.build("IJulia")`
-6. To Install Jupyter
-    - If you run the `include("setup.jl")` it will install it for you
-    - Otherwise, you will need to go to a Julia consol and type `Pkg.add("IJulia")`
+4. Follow the setup steps on the front of this repository. 
+5. To Install Jupyter
+    - If you followed the included steps it will install it for you
+    - Otherwise, you will need to go to a Julia consol and type `using Pkg; Pkg.add("IJulia")`
     - After installation, you can run jupyter with `jupyter notebook` or to use the latest interface (which is a major step forward) `jupyter lab`
     - Depending on how you installed Anaconda, this may require adding a directory to the PATH.  The location depends on the installation location, but it will be something like `/bin/Anaconda3/Scripts`
-7. To change Jupyter start-up directory
+6. To change Jupyter start-up directory
    - For Windows: if Anaconda was installed in C:/bin, then created a shortcut with
         - Target = `C:\bin\Anaconda3\Scripts\jupyter.exe notebook`
         - Or to use Jupyter Lab, `Target = C:\bin\Anaconda3\Scripts\jupyter.exe lab`
@@ -107,14 +99,6 @@ It is much easier to edit sourcecode in an editor with [Revise.jl](https://githu
 1. Find the `.` files are for your account.  For example, it is usually at `cd ~/.julia/` on linux/osx/windows with bash, or in a directory such as `C:\Users\USERNAME\.julia\`
 2. Create a directory called `config` as required, so that `.julia/config/` exists
 2. Copy [startup.jl](etc/startup.jl) to that directory, so that you have `.julia/config/startup.jl`
-
-
-### Installing Key Packages
-After installation open a REPL and type 
-```
-] add DifferentialEquations Interpolations Optim IJulia Atom Expectations Revise Distributions Parameters Juno Plots GR QuantEcon; precompile
-```
-This may take a long time (e.g. 30 minutes?)
 
 ### Usage
 
