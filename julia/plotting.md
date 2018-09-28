@@ -5,4 +5,4 @@ The main option for plotting is the `Plots.jl` package, which provides a conveni
 - [Plots.jl](https://github.com/JuliaPlots/Plots.jl):
   - Tutorial in [QuantEcon](https://lectures.quantecon.org/jl/julia_plots.html)
   - The baseline [documentation](http://docs.juliaplots.org/latest/) is excellent
-  - Also this [excellent tutorial](https://github.com/PaulSoderlind/JuliaTutorial/blob/master/Tutorial_04_Plots.ipynb)
+  - Also this [great tutorial](https://github.com/PaulSoderlind/JuliaTutorial/blob/master/Tutorial_04_Plots.ipynb)
