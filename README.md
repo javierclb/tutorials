@@ -5,7 +5,6 @@
 - [LaTeX](latex.md) 
 - [Atom](atom.md) 
 - [VS Code](vscode.md) -- Another text editor. Slightly faster than Atom, but does not support Julia. 
-
 - [Julia](julia.md) and [Julia Notes](/julia/README.md)
     -  [Julia Performance](julia/performance_bechmarking.md)
     -  [Julia Bechmark Testing](julia/benchmark_regressions.md)
