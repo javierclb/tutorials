@@ -1,6 +1,7 @@
 # Tutorials and Setup Guides
 
 - [GitHub](github.md) 
+- [VSE Syzygy](syzygy.md) 
 - [Atom](atom.md) 
 - [Julia](julia.md)
     -  [Julia Performance](julia/performance_benchmarking.md)
