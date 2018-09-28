@@ -1,4 +1,4 @@
-#Run this file a new installation.  Hopefully all unnecessary with Pkg3
+#Run this file a new installation.  Unnecessary if you are activating from a Manifest. 
 
 # Adding important libraries.
 @warn "Installing important libraries.  Be extremely patient"
