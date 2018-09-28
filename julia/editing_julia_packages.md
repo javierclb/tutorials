@@ -1,6 +1,6 @@
 # Editing Packages in Julia 1.0 
 
-:warning: The workflow around packages in Julia 1.0 is radically different than that in prior releases. To get up to speed on the new Julia package manager, `Pkg3`, see [the docs](https://docs.julialang.org/en/v1/stdlib/Pkg/).
+:warning: The workflow around packages in Julia 1.0 is radically different than that in prior releases. If you're having trouble with the new package manager, `Pkg3`, see [the docs](https://docs.julialang.org/en/v1/stdlib/Pkg/).
 
 ## Setup 
 
