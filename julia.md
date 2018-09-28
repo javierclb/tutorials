@@ -1,4 +1,6 @@
+
 # Introduction
+
 ## Choosing Julia
 
 - **Why Julia?**: Julia gets as close to writing whiteboard mathematics directly in code as any language has yet to achieved.  Moreover, the code has the possibility to be almost as as fast (or faster in the longrun) than typical code using compiled lanugages like Fortran or C/C++.

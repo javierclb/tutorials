@@ -6,7 +6,7 @@
 - [Atom](atom.md) 
 - [VS Code](vscode.md) -- Another text editor. Slightly faster than Atom, but does not support Julia. 
 - [Julia](julia.md)
-    -  [Julia Performance](julia/performance_bechmarking.md)
+    -  [Julia Performance](julia/performance_benchmarking.md)
     -  [Julia Bechmark Testing](julia/benchmark_regressions.md)
     -  [Julia Plotting](julia/plotting.md)
     -  [Julia Package Editing](julia/editing_julia_packages.md)
