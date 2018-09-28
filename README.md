@@ -10,7 +10,6 @@
 
 # Setup and dot Files
  - [Julia Setup](etc/setup.jl)
- - [.juliarc.jl](etc/.juliarc.jl) - For v0.6 Julia Startup
 
 ## Other
 - [Submitting Code](submitting_code.md) for classes
