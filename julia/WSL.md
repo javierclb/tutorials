@@ -53,8 +53,9 @@ export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME/julia-1.0.0/bin:$PATH
 - Hit `<Esc>` to exit insert mode, and then type `:x` to save and exit.
 - If you are often loading files in your Windows system, it can be useful to add a symlink.  To do this from your home directory, with your Windows username as `WINDOWSUSERNAME`, do something like the following
 ```bash
-ln -s /mnt/c/Users/WINDOWSUSERNAME/Documents/ Documents
+ln -s /mnt/c/Users/WINDOWSUSERNAME/Documents/GitHub Documents
 ```
+- Restart Ubuntu so paths take effect
 
 ## To Run IJulia
 - Run `julia` and then type
