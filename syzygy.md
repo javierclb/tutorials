@@ -55,7 +55,7 @@ See http://intro.syzygy.ca/troubleshooting/
 ## The Julia package manager is misbehaving.  How do I delete all of my local julia packages?
 In a terminal, recursively delete the `~/.julia` directory with
 ```bash
-rm -r .julia
+rm -rf .julia
 ```
 
 ## How do I restart my server?
