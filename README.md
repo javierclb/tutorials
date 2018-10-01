@@ -9,7 +9,6 @@
     - [Julia Plotting](julia/plotting.md)
     - [Julia Package Editing](julia/editing_julia_packages.md)
     - [Julia Tutorials](julia/tutorials.md)
-    - [Windows Subsystem for Linx](julia/WSL.md)
 - [Python](python.md)
 
 # Setup and dot Files
@@ -21,3 +20,4 @@
 - [Markdown](markdown.md) 
 - [LaTeX](latex.md) 
 - [VS Code](vscode.md) -- Another text editor. Slightly faster than Atom, but with incomplete support for Julia v1.0
+- [Windows Subsystem for Linux](julia/WSL.md)
