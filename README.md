@@ -4,11 +4,12 @@
 - [VSE Syzygy](syzygy.md) 
 - [Atom](atom.md) 
 - [Julia](julia.md)
-    -  [Julia Performance](julia/performance_benchmarking.md)
-    -  [Julia Benchmark Testing](julia/benchmark_regressions.md)
-    -  [Julia Plotting](julia/plotting.md)
-    -  [Julia Package Editing](julia/editing_julia_packages.md)
-    -  [Julia Tutorials](julia/tutorials.md)
+    - [Julia Performance](julia/performance_benchmarking.md)
+    - [Julia Benchmark Testing](julia/benchmark_regressions.md)
+    - [Julia Plotting](julia/plotting.md)
+    - [Julia Package Editing](julia/editing_julia_packages.md)
+    - [Julia Tutorials](julia/tutorials.md)
+    - [Windows Subsystem for Linx](julia/WSL.md)
 - [Python](python.md)
 
 # Setup and dot Files
