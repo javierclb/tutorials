@@ -53,6 +53,8 @@ This will overwrite everything, but will not modify your local files.
 See http://intro.syzygy.ca/troubleshooting/
 
 ## The Julia package manager is misbehaving.  How do I delete all of my local julia packages?
+
+See [Broken Configuration Files](http://intro.syzygy.ca/troubleshooting/#broken-configuration-files)
 In a terminal, recursively delete the `~/.julia` directory with
 ```bash
 rm -rf .julia
@@ -63,3 +65,7 @@ rm -rf .julia
 2. Choose `Control Panel` at the top
 3. Choose "Stop My Server" 
 4. Close all browser tabs, and login to https://vse.syzygy.ca/ again
+
+## The output is missing?
+See [Missing Output](http://intro.syzygy.ca/troubleshooting/#missing-output)
+
