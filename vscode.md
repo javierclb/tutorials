@@ -71,6 +71,8 @@ TEST
     ```
 8. *Optional:* For less irritating error messages, change to `"latex-workshop.message.error.show": false` and  `"latex-workshop.message.warning.show": false`
 
+9. *Optional:* To disable "preview mode" for newly opened files, `workbench.editor.enablePreviewFromQuickOpen: false`
+
 ## Other Links and Material
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) is an extension to maintain settings between different computers.  A little complicated to setup
 - https://github.com/formulahendry/vscode-code-runner is another package... not sure it is useful for Julia or Python
