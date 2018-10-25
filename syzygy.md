@@ -52,19 +52,31 @@ This will overwrite everything, but will not modify your local files.
 ## Troubleshooting
 See http://intro.syzygy.ca/troubleshooting/
 
+## How do I restart my server?
+1. In the Jupyterlab  `Commands`tab, type to get `Launch Classic Notebook`.
+2. Choose `Control Panel` at the top
+3. Choose "Stop My Server" 
+4. Close all browser tabs, and login to https://vse.syzygy.ca/ again
+
 ## The Julia package manager is misbehaving.  How do I delete all of my local julia packages?
+Always try restarting the server first. 
 
 See [Broken Configuration Files](http://intro.syzygy.ca/troubleshooting/#broken-configuration-files)
 In a terminal, recursively delete the `~/.julia` directory with
 ```bash
 rm -rf .julia
 ```
+Then restart the server
 
-## How do I restart my server?
-1. In the Jupyterlab  `Commands`tab, type to get `Launch Classic Notebook`.
-2. Choose `Control Panel` at the top
-3. Choose "Stop My Server" 
-4. Close all browser tabs, and login to https://vse.syzygy.ca/ again
+## Jupyter is Misbehaving (e.g. many errors like "Error Starting Kernel")
+Always try restarting the server first
+
+In a terminal, recursively delete the `~/.local` and `~/.jupyter` directories
+```bash
+rm -rf .local
+rm -rf .jupyter
+```
+Then restart the server
 
 ## The output is missing?
 See [Missing Output](http://intro.syzygy.ca/troubleshooting/#missing-output)
