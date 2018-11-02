@@ -1,4 +1,6 @@
 # Using GitHub
+
+(DEPRECATED)
 While you can download files separately from GitHub repositories, you are better off using git itself
 - Get a [GitHub](https://github.com/) account ID
     - Apply for the [Student Developer Pack](https://education.github.com/pack) for free stuff (including private repositories)
