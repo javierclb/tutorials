@@ -30,8 +30,8 @@ Install Julia
 ## Installing Julia
 Run the following commands in the directory you want to install within
 ```bash
-wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.0-linux-x86_64.tar.gz
-tar -xzvf julia-1.0.0-linux-x86_64.tar.gz
+wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.3-linux-x86_64.tar.gz
+tar -xzvf julia-1.0.3-linux-x86_64.tar.gz
 ```
 
 ## Install Python Dependencies
@@ -48,7 +48,7 @@ To edit your `.bashrc`
 - This opens Vim.  Go to the bottom of the file, and type `i` to enter insert mode.
 - Add something like the following:
 ```bash
-export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME/julia-1.0.0/bin:$PATH
+export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME/julia-1.0.3/bin:$PATH
 ```
 - Hit `<Esc>` to exit insert mode, and then type `:x` to save and exit.
 - If you are often loading files in your Windows system, it can be useful to add a symlink.  To do this from your home directory, with your Windows username as `WINDOWSUSERNAME`, do something like the following
