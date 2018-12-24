@@ -26,6 +26,7 @@ Many features in VS Code are found through the Command Palette which can be acce
 3. *Optional:* Install [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf) to export markdown   
 3. *Optional:* It is convenient to globally change the word wrap, so choose `Ctrl+,` and then set `"editor.wordWrap": "on"`
 4. *Optional:* It is convenient to make VSCode reload files automatically when loaded externally. To do this, so choose `Ctrl+,` and then set `"files.useExperimentalFileWatcher": true`
+5. *Optional:* Never use CRLF to end lines.  Choose the settings to Files.eol as LF or `"files.eol": "\n"`
 5. *Optional*: Install the [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extension.
 
 ## Github Integration
