@@ -19,7 +19,8 @@ Install [Anaconda](https://www.anaconda.com/download/#linux)
 - Download the installation script and then run it.  With the current version
 ```bash
 wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
-bash Anaconda3-5.2.0-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
+bash Anaconda3-2018.12-Linux-x86_64.sh
 ```
 - Do not install `vscode`
 - When it asks, make sure you add the binary file to your path by editing your `.bashrc`
@@ -30,8 +31,8 @@ Install Julia
 ## Installing Julia
 Run the following commands in the directory you want to install within
 ```bash
-wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.3-linux-x86_64.tar.gz
-tar -xzvf julia-1.0.3-linux-x86_64.tar.gz
+wget https://julialang-s3.julialang.org/bin/linux/x64/1.1/julia-1.1.0-linux-x86_64.tar.gz
+tar -xzvf julia-1.1.0-linux-x86_64.tar.gz
 ```
 
 ## Install Python Dependencies
@@ -48,7 +49,7 @@ To edit your `.bashrc`
 - This opens Vim.  Go to the bottom of the file, and type `i` to enter insert mode.
 - Add something like the following:
 ```bash
-export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME/julia-1.0.3/bin:$PATH
+export PATH=/home/USERNAME/anaconda3/bin:/home/USERNAME/julia-1.1.0/bin:$PATH
 ```
 - Hit `<Esc>` to exit insert mode, and then type `:x` to save and exit.
 - If you are often loading files in your Windows system, it can be useful to add a symlink.  To do this from your home directory, with your Windows username as `WINDOWSUSERNAME`, do something like the following
@@ -60,7 +61,7 @@ ln -s /mnt/c/Users/WINDOWSUSERNAME/Documents/GitHub Documents
 ## To Run IJulia
 - Run `julia` and then type
 ```julia
-] add IJulia Plots; precompile
+] add IJulia InstantiateFromURL; precompile
 ```
 - Then in the console type
 ```bash
