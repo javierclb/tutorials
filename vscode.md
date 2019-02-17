@@ -7,8 +7,6 @@
     - [Setup for Latex](#setup-for-latex)
     - [Other Links and Material](#other-links-and-material)
 
-:warning: As of September 2018, VS Code doesn't support Julia 1.0. 
-
 ## Extensions, User Settings, and the Command Pallete
 **Command Palette:** 
 Many features in VS Code are found through the Command Palette which can be accessed with `Ctrl+Shift+P`.  Throughout, these notes on OSX the `Ctrl` is the `⌘` button.  See https://code.visualstudio.com/docs/getstarted/userinterface for more on the VS Code UI.
@@ -34,6 +32,10 @@ Many features in VS Code are found through the Command Palette which can be acce
 - This will show you changes to the files, etc.  It will let you `Commit` with a message as well.
 - The left hand side of the bottom bar on VS Code (or the Git repository in this tab) will let you Pull/Push/Sync
 - A simple [Tutorial](https://www.youtube.com/watch?v=9cMWR-EGFuY) with more detail in [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
+
+## Julia
+
+- Search for `julia` in extensions, https://github.com/JuliaEditorSupport/julia-vscode
 
 ## Setup for Latex
 1. If you just did the Julia setup, perhaps restart so you don't have the same windows cluttered.
