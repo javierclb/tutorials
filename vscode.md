@@ -40,7 +40,7 @@ Many features in VS Code are found through the Command Palette which can be acce
 2. *Optional*: While TeXLive already has it, if you have installed `MikTex` on Windows, you will need to manually setup SyncTex:
     - Download [kpathsea630.dll](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/kpathsea630.dll?revision=46993&view=co)
     - Download [synctex.exe](https://www.tug.org/svn/texlive/trunk/Master/bin/win32/synctex.exe?revision=46993&view=co)
-    - And place both of them in the miktex binaries folder, e.g. `C:\Program Files\MiKTeX 2.9\miktex\bin\x64`
+    - And place both of them in the miktex binaries folder, e.g. `C:\Program Files\MiKTeX 2.9\miktex\bin\x64` or `C:\Users\USERNAME\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64` if you installed only for yourself
 3. Install the following packages in VS Code (clicking on them or using `Ctrl+Shift+X` to get the extensions)
   - [LaTex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
   - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
