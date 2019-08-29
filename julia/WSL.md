@@ -18,9 +18,8 @@ sudo apt-get install libxt6 libxrender1 libgl1-mesa-glx libqt5widgets5
 Install [Anaconda](https://www.anaconda.com/download/#linux) 
 - Download the installation script and then run it.  With the current version
 ```bash
-wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
-wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
-bash Anaconda3-2018.12-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+bash Anaconda3-2019.07-Linux-x86_64.sh
 ```
 - Do not install `vscode`
 - When it asks, make sure you add the binary file to your path by editing your `.bashrc`
@@ -31,8 +30,8 @@ Install Julia
 ## Installing Julia
 Run the following commands in the directory you want to install within
 ```bash
-wget https://julialang-s3.julialang.org/bin/linux/x64/1.1/julia-1.1.0-linux-x86_64.tar.gz
-tar -xzvf julia-1.1.0-linux-x86_64.tar.gz
+wget https://julialang-s3.julialang.org/bin/linux/x64/1.2/julia-1.2.0-linux-x86_64.tar.gz
+tar -xzvf julia-1.2.0-linux-x86_64.tar.gz
 ```
 
 ## Install Python Dependencies
